@@ -60,7 +60,7 @@ h2 {
 #boy_container {
   position: absolute;
   top: 0;
-  left: 50vw;
+  left: 60vw;
 }
 
 #boy_sprite {
@@ -70,7 +70,7 @@ h2 {
 #boy1_container {
   position: absolute;
   top: 0;
-  left: 50vw;
+  left: 80vw;
 }
 
 #boy1_sprite {
@@ -80,7 +80,7 @@ h2 {
 #preist_container {
   position: absolute;
   top: 0;
-  left: 40vw;
+  left: 20vw;
 }
 
 #priest_sprite {
@@ -90,7 +90,7 @@ h2 {
 #preist1_container {
   position: absolute;
   top: 0;
-  left: 40vw;
+  left: 50vw;
 }
 
 #priest1_sprite {

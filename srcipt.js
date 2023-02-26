@@ -14,6 +14,13 @@ function start() {
   document
     .querySelector("#priest_container")
     .addEventListener("click", priestRun);
+
+  document.querySelector("#boy1_container").classList.add("falling");
+  document.querySelector("#priest1_container").classList.add("falling");
+  document.querySelector("#boy1_container").addEventListener("click", boyRun1);
+  document
+    .querySelector("#priest1_container")
+    .addEventListener("click", priestRun1);
 }
 
 function priestRun() {
@@ -26,6 +33,20 @@ function priestRun() {
   document
     .querySelector("#priest_container")
     .addEventListener("animationend", priestGone);
+
+  incrementPoints();
+}
+
+function priestRun1() {
+  console.log("priestRun1");
+  document
+    .querySelector("#priest1_container")
+    .removeEventListener("click", priestRun1);
+  document.querySelector("#priest1_container").classList.add("paused");
+  document.querySelector("#priest1_sprite").classList.add("zoom_out");
+  document
+    .querySelector("#priest1_container")
+    .addEventListener("animationend", priestGone1);
 
   incrementPoints();
 }
@@ -46,17 +67,30 @@ function priestGone() {
     .addEventListener("click", priestRun);
 }
 
+function priestGone1() {
+  document
+    .querySelector("#priest1_container")
+    .removeEventListener("animationend", priestGone1);
+
+  document.querySelector("#priest1_sprite").classList.remove("zoom_out");
+  document.querySelector("#priest1_container").classList.remove("paused");
+  document.querySelector("#priest1_container").classList.remove("falling");
+  document.querySelector("#priest1_container").offsetWidth;
+  document.querySelector("#priest1_container").classList.add("falling");
+
+  document
+    .querySelector("#priest1_container")
+    .addEventListener("click", priestRun1);
+}
+
 function boyRun() {
   console.log("boyRun");
   document.querySelector("#boy_container").removeEventListener("click", boyRun);
 
-  // Stop coin container
   document.querySelector("#boy_container").classList.add("paused");
 
-  // sæt forsvind-animation på coin
   document.querySelector("#boy_sprite").classList.add("zoom_out");
 
-  // når forsvind-animation er færdig: coinGone
   document
     .querySelector("#boy_container")
     .addEventListener("animationend", boyGone);
@@ -64,25 +98,47 @@ function boyRun() {
   decrementLives();
 }
 
+function boyRun1() {
+  console.log("boyRun1");
+  document
+    .querySelector("#boy1_container")
+    .removeEventListener("click", boyRun1);
+
+  document.querySelector("#boy1_container").classList.add("paused");
+
+  document.querySelector("#boy1_sprite").classList.add("zoom_out");
+
+  document
+    .querySelector("#boy1_container")
+    .addEventListener("animationend", boyGone1);
+
+  decrementLives();
+}
+
 function boyGone() {
-  // fjern event der bringer os herind
   document
     .querySelector("#boy_container")
     .removeEventListener("animationend", boyGone);
-
-  // fjern forsvind-animation
   document.querySelector("#boy_sprite").classList.remove("zoom_out");
-
-  // fjern pause
   document.querySelector("#boy_container").classList.remove("paused");
-
-  // genstart falling animation
   document.querySelector("#boy_container").classList.remove("falling");
   document.querySelector("#boy_container").offsetWidth;
   document.querySelector("#boy_container").classList.add("falling");
-
-  // gør det muligt at klikke på bomb igen
   document.querySelector("#priest_container").addEventListener("click", boyRun);
+}
+
+function boyGone1() {
+  document
+    .querySelector("#boy1_container")
+    .removeEventListener("animationend", boyGone1);
+  document.querySelector("#boy1_sprite").classList.remove("zoom_out");
+  document.querySelector("#boy1_container").classList.remove("paused");
+  document.querySelector("#boy1_container").classList.remove("falling");
+  document.querySelector("#boy1_container").offsetWidth;
+  document.querySelector("#boy1_container").classList.add("falling");
+  document
+    .querySelector("#priest1_container")
+    .addEventListener("click", boyRun1);
 }
 
 function incrementPoints() {
