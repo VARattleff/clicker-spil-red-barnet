@@ -5,8 +5,6 @@ let points = 0;
 let lives = 0;
 
 function start() {
-  console.log("JavaScriptFungere");
-
   points = 0;
   lives = 3;
 
@@ -56,7 +54,7 @@ function boyRun() {
   document.querySelector("#boy_container").classList.add("paused");
 
   // sæt forsvind-animation på coin
-  document.querySelector("#boy_sprite").classList.add("zoom_in");
+  document.querySelector("#boy_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
   document
@@ -73,7 +71,7 @@ function boyGone() {
     .removeEventListener("animationend", boyGone);
 
   // fjern forsvind-animation
-  document.querySelector("#boy_sprite").classList.remove("zoom_in");
+  document.querySelector("#boy_sprite").classList.remove("zoom_out");
 
   // fjern pause
   document.querySelector("#boy_container").classList.remove("paused");
@@ -92,14 +90,14 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 10) {
+  if (points == 5) {
     LevelComplete();
   }
 }
 
 function displayPoints() {
   console.log("vis point");
-  document.querySelector("#coin_count").textContent = points;
+  document.querySelector("#kill_count").textContent = points;
 }
 
 function decrementLives() {
