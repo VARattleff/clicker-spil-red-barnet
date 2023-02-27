@@ -8,19 +8,23 @@ function start() {
   points = 0;
   lives = 3;
 
-  document.querySelector("#boy_container").classList.add("falling");
-  document.querySelector("#priest_container").classList.add("falling");
-  document.querySelector("#boy_container").addEventListener("click", boyRun);
+  document.querySelector("#boy_container").classList.add("falling1");
+  document.querySelector("#priest_container").classList.add("falling3");
+  document
+    .querySelector("#boy_container")
+    .addEventListener("mousedown", boyRun);
   document
     .querySelector("#priest_container")
-    .addEventListener("click", priestRun);
+    .addEventListener("mousedown", priestRun);
 
-  document.querySelector("#boy1_container").classList.add("falling");
-  document.querySelector("#priest1_container").classList.add("falling");
-  document.querySelector("#boy1_container").addEventListener("click", boyRun1);
+  document.querySelector("#boy1_container").classList.add("falling2");
+  document.querySelector("#priest1_container").classList.add("falling4");
+  document
+    .querySelector("#boy1_container")
+    .addEventListener("mousedown", boyRun1);
   document
     .querySelector("#priest1_container")
-    .addEventListener("click", priestRun1);
+    .addEventListener("mousedown", priestRun1);
 }
 
 function priestRun() {
@@ -58,9 +62,9 @@ function priestGone() {
 
   document.querySelector("#priest_sprite").classList.remove("zoom_out");
   document.querySelector("#priest_container").classList.remove("paused");
-  document.querySelector("#priest_container").classList.remove("falling");
+  document.querySelector("#priest_container").classList.remove("falling3");
   document.querySelector("#priest_container").offsetWidth;
-  document.querySelector("#priest_container").classList.add("falling");
+  document.querySelector("#priest_container").classList.add("falling3");
 
   document
     .querySelector("#priest_container")
@@ -74,9 +78,9 @@ function priestGone1() {
 
   document.querySelector("#priest1_sprite").classList.remove("zoom_out");
   document.querySelector("#priest1_container").classList.remove("paused");
-  document.querySelector("#priest1_container").classList.remove("falling");
+  document.querySelector("#priest1_container").classList.remove("falling4");
   document.querySelector("#priest1_container").offsetWidth;
-  document.querySelector("#priest1_container").classList.add("falling");
+  document.querySelector("#priest1_container").classList.add("falling4");
 
   document
     .querySelector("#priest1_container")
@@ -121,9 +125,9 @@ function boyGone() {
     .removeEventListener("animationend", boyGone);
   document.querySelector("#boy_sprite").classList.remove("zoom_out");
   document.querySelector("#boy_container").classList.remove("paused");
-  document.querySelector("#boy_container").classList.remove("falling");
+  document.querySelector("#boy_container").classList.remove("falling1");
   document.querySelector("#boy_container").offsetWidth;
-  document.querySelector("#boy_container").classList.add("falling");
+  document.querySelector("#boy_container").classList.add("falling1");
   document.querySelector("#priest_container").addEventListener("click", boyRun);
 }
 
@@ -133,12 +137,10 @@ function boyGone1() {
     .removeEventListener("animationend", boyGone1);
   document.querySelector("#boy1_sprite").classList.remove("zoom_out");
   document.querySelector("#boy1_container").classList.remove("paused");
-  document.querySelector("#boy1_container").classList.remove("falling");
+  document.querySelector("#boy1_container").classList.remove("falling2");
   document.querySelector("#boy1_container").offsetWidth;
-  document.querySelector("#boy1_container").classList.add("falling");
-  document
-    .querySelector("#priest1_container")
-    .addEventListener("click", boyRun1);
+  document.querySelector("#boy1_container").classList.add("falling2");
+  document.querySelector("#boy1_container").addEventListener("click", boyRun1);
 }
 
 function incrementPoints() {

@@ -1,80 +1,77 @@
-/* Animation 1: Falling
-   Bolden falder konstant fra oven. */
-.falling {
-  animation-name: falling; /*animation-name relates to "@keyframes" naming on line 10*/
-  animation-duration: 5s; /*animation-duration sets the full duration of your animation*/
-  animation-timing-function: linear; /*animation-timing-function sets the flow of your animation*/
-  animation-iteration-count: infinite; /*animation-iteration-count sets the amount of times your animation will play*/
-}
-
-@keyframes falling {
-  0% {
-    transform: translate(0, -300%);
-  }
-
-  100% {
-    transform: translate(0, 300%);
-  }
-}
-
-/* Animation 2: Bouncing
-   Ball is bouncing */
-.bouncing {
-  animation-name: bouncing;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+.falling1 {
+  animation-name: boy1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes bouncing {
+@keyframes boy1 {
   0% {
-    transform: translate(0, -150%);
-  }
-
-  50% {
-    transform: translate(0, 150%);
+    transform: translate(300%, 100%);
   }
 
   100% {
-    transform: translate(0, -150%);
+    transform: translate(-500%, 100%);
   }
 }
 
-/* Animation 3: Drop
-   Ball drops */
-.drop {
-  animation-name: drop;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  transform: translate(
-    0,
-    150%
-  ); /*This sets the default position of the ball. In this case I want it to stay at its destination upon finishing the animation (To match line 59)*/
+.falling2 {
+  animation-name: boy2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-@keyframes drop {
+@keyframes boy2 {
   0% {
-    transform: translate(0, -300%);
+    transform: translate(300%, 200%);
   }
 
   100% {
-    transform: translate(0, 150%);
+    transform: translate(-500%, 400%);
   }
 }
-/* Animation 4: Pattern
-   Ball moves in pattern */
 
-/* Animation 5: Zoom out
-   Ball zooms out into a tiny little ball */
+.falling3 {
+  animation-name: priest1;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes priest1 {
+  0% {
+    transform: translate(100%, 100%);
+  }
+
+  100% {
+    transform: translate(-200%, 100%);
+  }
+}
+
+.falling4 {
+  animation-name: priest2;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes priest2 {
+  0% {
+    transform: translate(100%, 0%);
+  }
+
+  100% {
+    transform: translate(-100%, 50%);
+  }
+}
+
 .zoom_out {
   animation-name: zoom_out;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-  transform: scale(
-    0.1
-  ); /*This sets the default size of the ball. In this case I want it to stay as small as it is once the animation finishes (To match line 126)*/
+  transform: scale(0.1);
 }
 
 @keyframes zoom_out {
@@ -96,328 +93,5 @@
 
   100% {
     transform: scale(0.1);
-  }
-}
-
-/* Animation 6: Zoom in
-   Ball zooms in into an enlarged ball */
-.zoom_in {
-  animation-name: zoom_in;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transform: scale(10);
-}
-
-@keyframes zoom_in {
-  0% {
-    transform: scale(1);
-  }
-
-  10% {
-    transform: scale(1.25);
-  }
-
-  20% {
-    transform: scale(1.75);
-  }
-
-  30% {
-    transform: scale(2.25);
-  }
-
-  40% {
-    transform: scale(3);
-  }
-
-  60% {
-    transform: scale(4);
-  }
-
-  80% {
-    transform: scale(6);
-  }
-
-  100% {
-    transform: scale(10);
-  }
-}
-
-/* Animation 7: Fade out
-   Ball's colour fades */
-.fade_out {
-  animation-name: fade_out;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  opacity: 0; /*This sets the opacity of the ball, in this case I want it to stay faded out, to stay gone once the animation finishes (To match line 188)*/
-}
-
-@keyframes fade_out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Animation 8: Fade in
-   Ball's colour fades into the picture*/
-.fade_in {
-  animation-name: fade_in;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  opacity: 1;
-}
-
-@keyframes fade_in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Animation 9: Rotation
-   Ball rotates*/
-.rotation {
-  animation-name: rotation;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Animation 10: Rotation2
-   Ball rotates*/
-.rotation2 {
-  animation-name: rotation2;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotation2 {
-  0% {
-    transform: rotate(0deg) translate(-150%);
-  }
-  100% {
-    transform: rotate(360deg) translate(-150%);
-  }
-}
-
-/* Animation 11: Glow
-   Ball glows*/
-.glow {
-  animation-name: glow;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes glow {
-  0% {
-    filter: drop-shadow(0px 0px 0px rgb(240, 255, 25));
-  }
-  50% {
-    filter: drop-shadow(0px 0px 20px rgb(240, 255, 25));
-  }
-  100% {
-    filter: drop-shadow(0px 0px 0px rgb(240, 255, 25));
-  }
-}
-
-/* Animation 12: Blur to grey
-   Ball blurs while moving from one side to another*/
-.blur_to_gray {
-  animation-name: blur_to_gray;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes blur_to_gray {
-  0% {
-    transform: translate(-150%, 0) rotate(0deg); /* Note that translate has to happen before rotate, otherwise the trajectory of the ball will change to match the rotation*/
-  }
-  25% {
-    transform: translate(0, 0) rotate(90deg);
-    filter: grayscale(0.5) blur(2.5px);
-  }
-  50% {
-    transform: translate(150%, 0) rotate(180deg);
-    filter: grayscale(1) blur(5px);
-  }
-  75% {
-    transform: translate(0, 0) rotate(90deg);
-    filter: grayscale(0.5) blur(2.5px);
-  }
-  100% {
-    transform: translate(-150%, 0) rotate(0deg);
-    filter: grayscale(0);
-  }
-}
-
-/* Animation 13: Pulse
-   Ball pulsates, indicating to click on it for instance*/
-.pulse {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Animation 14: Overshoot
-   Ball rolls, but goes past the box, then falls back in place */
-.overshoot {
-  animation-name: overshoot;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(
-    0.57,
-    0.9,
-    0.96,
-    1.69
-  ); /*Used https://cubic-bezier.com/ to determain the code*/
-  animation-iteration-count: 1;
-  transform: translate(150%, 0);
-}
-
-@keyframes overshoot {
-  0% {
-    transform: translate(-150%, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(150%, 0) rotate(360deg);
-  }
-}
-
-/* Animation 15: Bounce
-   Ball bounces across the screen */
-.bounce {
-  animation-name: bounce;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-  transform: translate(150%, 150%);
-}
-
-@keyframes bounce {
-  0% {
-    transform: translate(-150%, -100%) rotate(0deg);
-  }
-  10% {
-    transform: translate(-120%, 150%) rotate(36deg);
-  }
-  20% {
-    transform: translate(-90%, 25%) rotate(72deg);
-  }
-  30% {
-    transform: translate(-60%, 150%) rotate(108deg);
-  }
-  40% {
-    transform: translate(-30%, 87.5%) rotate(144deg);
-  }
-  50% {
-    transform: translate(0, 150%) rotate(180deg);
-  }
-  60% {
-    transform: translate(30%, 118.75%) rotate(216deg);
-  }
-  70% {
-    transform: translate(60%, 150%) rotate(252deg);
-  }
-  80% {
-    transform: translate(90%, 134.375%) rotate(288deg);
-  }
-  90% {
-    transform: translate(120%, 150%) rotate(324deg);
-  }
-  95% {
-    transform: translate(135%, 142.1875%) rotate(342deg);
-  }
-  100% {
-    transform: translate(150%, 150%) rotate(360deg);
-  }
-}
-
-/* Animation 16: Squash
-   Ball moves in pattern, and squashes abit on the sides of the box */
-.squash {
-  animation-name: squash;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transform: translate(8%, -150%);
-}
-
-@keyframes squash {
-  0% {
-    transform: translate(8%, -150%);
-  }
-
-  23% {
-    transform: translate(140%, 0%);
-  }
-
-  25% {
-    transform: translate(185%, 0%) scaleX(0.75);
-  }
-
-  27% {
-    transform: translate(150%, 8%);
-  }
-
-  48% {
-    transform: translate(0, 140%);
-  }
-
-  50% {
-    transform: translate(0, 185%) scaleY(0.75);
-  }
-
-  52% {
-    transform: translate(-8%, 150%);
-  }
-
-  73% {
-    transform: translate(-140%, 0);
-  }
-
-  75% {
-    transform: translate(-185%, 0) scaleX(0.75);
-  }
-
-  77% {
-    transform: translate(-150%, -8%);
-  }
-  96% {
-    transform: translate(0, -140%);
-  }
-  98% {
-    transform: translate(0, -185%) scaleY(0.75);
-  }
-  100% {
-    transform: translate(8%, -150%);
   }
 }
