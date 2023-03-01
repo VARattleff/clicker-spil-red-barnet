@@ -41,6 +41,9 @@ function start() {
   document
     .querySelector("#pope_container")
     .addEventListener("mousedown", popeRun);
+
+  document.querySelector("#boy3_container").classList.add("falling8");
+  document.querySelector("mousedown", boyRun3);
 }
 
 function popeRun() {
@@ -236,8 +239,39 @@ function boyGone() {
   document.querySelector("#boy_container").offsetWidth;
   document.querySelector("#boy_container").classList.add("falling1");
   document
-    .querySelector("#priest_container")
+    .querySelector("#boy_container")
     .addEventListener("mousedown", boyRun);
+}
+
+function boyRun3() {
+  console.log("boyRun3");
+  document
+    .querySelector("#boy3_container")
+    .removeEventListener("mousedown", boyRun3);
+
+  document.querySelector("#boy3_container").classList.add("paused");
+
+  document.querySelector("#boy3_sprite").classList.add("zoom_out");
+
+  document
+    .querySelector("#boy3_container")
+    .addEventListener("animationend", boyGone3);
+
+  decrementLives();
+}
+
+function boyGone3() {
+  document
+    .querySelector("#boy3_container")
+    .removeEventListener("animationend", boyGone3);
+  document.querySelector("#boy3_sprite").classList.remove("zoom_out");
+  document.querySelector("#boy3_container").classList.remove("paused");
+  document.querySelector("#boy3_container").classList.remove("falling8");
+  document.querySelector("#boy3_container").offsetWidth;
+  document.querySelector("#boy3_container").classList.add("falling8");
+  document
+    .querySelector("#boy3_container")
+    .addEventListener("mousedown", boyRun3);
 }
 
 function boyGone1() {
@@ -246,9 +280,9 @@ function boyGone1() {
     .removeEventListener("animationend", boyGone1);
   document.querySelector("#boy1_sprite").classList.remove("zoom_out");
   document.querySelector("#boy1_container").classList.remove("paused");
-  document.querySelector("#boy1_container").classList.remove("falling2");
+  document.querySelector("#boy1_container").classList.remove("falling8");
   document.querySelector("#boy1_container").offsetWidth;
-  document.querySelector("#boy1_container").classList.add("falling2");
+  document.querySelector("#boy1_container").classList.add("falling8");
   document
     .querySelector("#boy1_container")
     .addEventListener("mousedown", boyRun1);
@@ -259,7 +293,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 5) {
+  if (points == 15) {
     LevelComplete();
   }
 }

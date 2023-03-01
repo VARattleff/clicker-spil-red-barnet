@@ -41,11 +41,11 @@
 
 @keyframes priest1 {
   0% {
-    transform: translate(100%, 100%);
+    transform: translate(100%, 300%);
   }
 
   100% {
-    transform: translate(-200%, 100%);
+    transform: translate(-200%, 300%);
   }
 }
 
@@ -58,52 +58,52 @@
 
 @keyframes priest2 {
   0% {
-    transform: translate(-100%, 0%);
+    transform: translate(-100%, 100%);
   }
 
   100% {
-    transform: translate(100%, 0%);
+    transform: translate(100%, 100%);
   }
 }
 
 .falling5 {
   animation-name: bishop;
-  animation-duration: 8s;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes bishop {
   0% {
-    transform: translate(-200%, 200%);
+    transform: translate(-200%, 300%);
   }
 
   100% {
-    transform: translate(500%, 200%);
+    transform: translate(500%, 300%);
   }
 }
 
 .falling6 {
   animation-name: cardinal;
-  animation-duration: 8s;
+  animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes cardinal {
   0% {
-    transform: translate(-1000%, 200%);
+    transform: translate(-400%, 250%);
   }
 
   100% {
-    transform: translate(1000%, 200%);
+    transform: translate(400%, 250%);
   }
 }
 
 .falling7 {
   animation-name: pope;
-  animation-duration: 4s;
-  animation-timing-function: linear;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
@@ -114,6 +114,23 @@
 
   100% {
     transform: translate(1000%, 250%);
+  }
+}
+
+.falling8 {
+  animation-name: steveRun;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes steveRun {
+  0% {
+    transform: translate(-300%, 250%);
+  }
+
+  100% {
+    transform: translate(500%, 250%);
   }
 }
 

@@ -154,7 +154,18 @@ img {
 }
 
 #boy1_sprite {
-  width: 90%;
+  width: 60%;
+  filter: drop-shadow(0 0 10px rgb(30, 234, 7));
+}
+
+#boy3_container {
+  position: absolute;
+  top: 0;
+  left: 30vw;
+}
+
+#boy3_sprite {
+  width: 60%;
   filter: drop-shadow(0 0 10px rgb(30, 234, 7));
 }
 
