@@ -191,7 +191,6 @@ function priestGone1() {
 }
 
 function boyRun() {
-  console.log("boyRun");
   document
     .querySelector("#boy_container")
     .removeEventListener("mousedown", boyRun);
@@ -263,8 +262,8 @@ function incrementPoints() {
 }
 
 function displayPoints() {
-  console.log("vis point");
-  document.querySelector("#kill_count").textContent = points;
+  document.querySelector("#kill_count").textContent =
+    "Kill Count:" + "" + "" + points;
 }
 
 function decrementLives() {
@@ -272,14 +271,13 @@ function decrementLives() {
 
   if (lives <= 1) {
     gameOver();
-  } else {
-    showDecrementedLives();
   }
+
+  showDecrementedLives();
   lives--;
 }
 
 function incrementLives() {
-  console.log("få et liv");
   lives++;
   showIncrementedLives();
 }

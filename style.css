@@ -3,11 +3,14 @@
 body {
   margin: 0;
   font-family: fantasy;
-  cursor: url(images/cursor.png) 25 15, auto;
 }
 
 h2 {
   font-size: 20em;
+}
+
+img {
+  width: 100%;
 }
 
 #screen {
@@ -129,35 +132,41 @@ h2 {
 }
 
 #game_ui {
-  position: absolute;
-  top: 2vw;
-  right: 1vw;
+  grid-area: 1/1;
   color: white;
   font-size: 2em;
   pointer-events: none;
 }
 
-#score_board {
+/* #score_board {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 0.1em;
+  text-align: center;
+} */
+
+#score_board {
   text-align: center;
 }
 
 #kill_count {
   white-space: nowrap;
   text-align: center;
+  font-size: 100px;
 }
 
 #life_board {
-  display: grid;
-  grid-template-columns: 2.5em 2.5em 2.5em;
-  transform: translate(-750%);
+  text-align: center;
 }
 
-#life_board img {
-  width: 200%;
-  border-spacing: 10%;
+#heart1 {
+  width: 5%;
+}
+#heart2 {
+  width: 5%;
+}
+#heart3 {
+  width: 5%;
 }
 
 .active_heart {
