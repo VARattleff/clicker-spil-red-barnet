@@ -8,6 +8,9 @@ function start() {
   points = 0;
   lives = 3;
 
+  document
+    .querySelector("#game_over_button")
+    .addEventListener("mousedown", restart);
   document.querySelector("#boy_container").classList.add("falling1");
   document.querySelector("#priest_container").classList.add("falling3");
   document
@@ -317,3 +320,7 @@ document.addEventListener("click", () => {
     cursor.classList.remove("expand");
   }, 500);
 });
+
+function restart() {
+  window.location = window.location;
+}

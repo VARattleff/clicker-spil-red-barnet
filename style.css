@@ -1,7 +1,7 @@
 @import url(animation.css);
 
 body {
-  filter: grayscale(15%) blur(0.9px);
+  filter: grayscale(35%) blur(0.9px);
   margin: 0;
   font-family: fantasy;
   cursor: url(img/newCursor.png) 45 45, auto;
@@ -105,6 +105,19 @@ img {
   display: grid;
   justify-content: center;
   align-content: center;
+  background-color: rgb(237, 237, 238);
+  text-align: center;
+}
+
+#game_over_button {
+  background-color: black;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 50%;
+  color: white;
+  font-size: 80px;
 }
 
 #level_complete {
@@ -131,6 +144,7 @@ img {
 
 #boy_sprite {
   width: 100%;
+  filter: drop-shadow(0 0 10px rgb(30, 234, 7));
 }
 
 #boy1_container {
@@ -141,6 +155,7 @@ img {
 
 #boy1_sprite {
   width: 90%;
+  filter: drop-shadow(0 0 10px rgb(30, 234, 7));
 }
 
 #preist_container {
@@ -151,6 +166,7 @@ img {
 
 #priest_sprite {
   width: 8%;
+  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
 #preist1_container {
@@ -161,6 +177,7 @@ img {
 
 #priest1_sprite {
   width: 15%;
+  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
 #bishop_container {
@@ -171,6 +188,7 @@ img {
 
 #bishop_sprite {
   width: 75%;
+  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
 #cardinal_container {
@@ -181,6 +199,7 @@ img {
 
 #cardinal_sprite {
   width: 75%;
+  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
 #pope_container {
@@ -191,6 +210,7 @@ img {
 
 #pope_sprite {
   width: 75%;
+  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
 #game_ui {
@@ -208,9 +228,9 @@ img {
   text-align: center;
   font-size: 100px;
   color: red;
-border-width:10px;
- border-style:none;
- filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+  border-width: 10px;
+  border-style: none;
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
 }
 
 #kill_count1 {
