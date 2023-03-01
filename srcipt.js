@@ -25,6 +25,107 @@ function start() {
   document
     .querySelector("#priest1_container")
     .addEventListener("mousedown", priestRun1);
+
+  document.querySelector("#bishop_container").classList.add("falling5");
+  document.querySelector("#cardinal_container").classList.add("falling6");
+  document.querySelector("#pope_container").classList.add("falling7");
+  document
+    .querySelector("#bishop_container")
+    .addEventListener("mousedown", bishopRun);
+  document
+    .querySelector("#cardinal_container")
+    .addEventListener("mousedown", cardinalRun);
+  document
+    .querySelector("#pope_container")
+    .addEventListener("mousedown", popeRun);
+}
+
+function popeRun() {
+  console.log("popeRun");
+  document
+    .querySelector("#pope_container")
+    .removeEventListener("click", popeRun);
+  document.querySelector("#pope_container").classList.add("paused");
+  document.querySelector("#pope_sprite").classList.add("zoom_out");
+  document
+    .querySelector("#pope_container")
+    .addEventListener("animationend", popeGone);
+
+  incrementPoints();
+}
+
+function popeGone() {
+  document
+    .querySelector("#pope_container")
+    .removeEventListener("animationend", popeGone);
+
+  document.querySelector("#pope_sprite").classList.remove("zoom_out");
+  document.querySelector("#pope_container").classList.remove("paused");
+  document.querySelector("#pope_container").classList.remove("falling7");
+  document.querySelector("#pope_container").offsetWidth;
+  document.querySelector("#pope_container").classList.add("falling7");
+
+  document.querySelector("#pope_container").addEventListener("click", popeRun);
+}
+
+function cardinalRun() {
+  console.log("cardinalRun");
+  document
+    .querySelector("#cardinal_container")
+    .removeEventListener("click", cardinalRun);
+  document.querySelector("#cardinal_container").classList.add("paused");
+  document.querySelector("#cardinal_sprite").classList.add("zoom_out");
+  document
+    .querySelector("#cardinal_container")
+    .addEventListener("animationend", cardinalGone);
+
+  incrementPoints();
+}
+
+function cardinalGone() {
+  document
+    .querySelector("#cardinal_container")
+    .removeEventListener("animationend", cardinalGone);
+
+  document.querySelector("#cardinal_sprite").classList.remove("zoom_out");
+  document.querySelector("#cardinal_container").classList.remove("paused");
+  document.querySelector("#cardinal_container").classList.remove("falling6");
+  document.querySelector("#cardinal_container").offsetWidth;
+  document.querySelector("#cardinal_container").classList.add("falling6");
+
+  document
+    .querySelector("#cardinal_container")
+    .addEventListener("click", cardinalRun);
+}
+
+function bishopRun() {
+  console.log("bishopRun");
+  document
+    .querySelector("#bishop_container")
+    .removeEventListener("click", priestRun);
+  document.querySelector("#bishop_container").classList.add("paused");
+  document.querySelector("#bishop_sprite").classList.add("zoom_out");
+  document
+    .querySelector("#bishop_container")
+    .addEventListener("animationend", bishopGone);
+
+  incrementPoints();
+}
+
+function bishopGone() {
+  document
+    .querySelector("#bishop_container")
+    .removeEventListener("animationend", bishopGone);
+
+  document.querySelector("#bishop_sprite").classList.remove("zoom_out");
+  document.querySelector("#bishop_container").classList.remove("paused");
+  document.querySelector("#bishop_container").classList.remove("falling5");
+  document.querySelector("#bishop_container").offsetWidth;
+  document.querySelector("#bishop_container").classList.add("falling5");
+
+  document
+    .querySelector("#bishop_container")
+    .addEventListener("click", bishopRun);
 }
 
 function priestRun() {

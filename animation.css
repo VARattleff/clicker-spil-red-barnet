@@ -66,6 +66,57 @@
   }
 }
 
+.falling5 {
+  animation-name: bishop;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bishop {
+  0% {
+    transform: translate(100%, 0%);
+  }
+
+  100% {
+    transform: translate(-100%, 50%);
+  }
+}
+
+.falling6 {
+  animation-name: cardinal;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cardinal {
+  0% {
+    transform: translate(100%, 0%);
+  }
+
+  100% {
+    transform: translate(-100%, 50%);
+  }
+}
+
+.falling7 {
+  animation-name: pope;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pope {
+  0% {
+    transform: translate(100%, 0%);
+  }
+
+  100% {
+    transform: translate(-100%, 50%);
+  }
+}
+
 .zoom_out {
   animation-name: zoom_out;
   animation-duration: 1s;

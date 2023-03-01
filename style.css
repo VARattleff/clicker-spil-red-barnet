@@ -97,6 +97,36 @@ h2 {
   width: 25%;
 }
 
+#bishop_container {
+  position: absolute;
+  top: 0;
+  left: 20vw;
+}
+
+#bishop_sprite {
+  width: 75%;
+}
+
+#cardinal_container {
+  position: absolute;
+  top: 0;
+  left: 60vw;
+}
+
+#cardinal_sprite {
+  width: 75%;
+}
+
+#pope_container {
+  position: absolute;
+  top: 0;
+  left: 40vw;
+}
+
+#pope_sprite {
+  width: 75%;
+}
+
 #heart_container {
   position: absolute;
 
