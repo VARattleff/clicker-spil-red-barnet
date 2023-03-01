@@ -1,9 +1,10 @@
 @import url(animation.css);
 
 body {
+  filter: grayscale(15%) blur(0.9px);
   margin: 0;
   font-family: fantasy;
-  cursor: cell;
+  cursor: url(img/newCursor.png) 48 48, auto;
 }
 
 .cursor {
@@ -198,13 +199,6 @@ img {
   color: white;
   font-size: 2em;
 }
-
-/* #score_board {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 0.1em;
-  text-align: center;
-} */
 
 #score_board {
   text-align: center;
