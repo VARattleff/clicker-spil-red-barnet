@@ -3,11 +3,11 @@
 body {
   margin: 0;
   font-family: fantasy;
-  /* cursor: url(images/cursor.png) 25 15, auto; */
+  cursor: url(images/cursor.png) 25 15, auto;
 }
 
 h2 {
-  font-size: 10em;
+  font-size: 20em;
 }
 
 #screen {
@@ -25,6 +25,7 @@ h2 {
 #game_background {
   grid-area: 1 /1;
   background-image: url(img/Church.jpg);
+  background-size: cover;
 }
 
 #game_elements {
@@ -126,17 +127,6 @@ h2 {
 #pope_sprite {
   width: 75%;
 }
-
-/* #heart_container {
-  position: absolute;
-
-  top: 0;
-  left: 55vw;
-}
-
-#heart_sprite {
-  width: 100%;
-} */
 
 #game_ui {
   position: absolute;

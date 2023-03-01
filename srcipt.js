@@ -44,7 +44,7 @@ function popeRun() {
   console.log("popeRun");
   document
     .querySelector("#pope_container")
-    .removeEventListener("click", popeRun);
+    .removeEventListener("mousedown", popeRun);
   document.querySelector("#pope_container").classList.add("paused");
   document.querySelector("#pope_sprite").classList.add("zoom_out");
   document
@@ -65,14 +65,16 @@ function popeGone() {
   document.querySelector("#pope_container").offsetWidth;
   document.querySelector("#pope_container").classList.add("falling7");
 
-  document.querySelector("#pope_container").addEventListener("click", popeRun);
+  document
+    .querySelector("#pope_container")
+    .addEventListener("mousedown", popeRun);
 }
 
 function cardinalRun() {
   console.log("cardinalRun");
   document
     .querySelector("#cardinal_container")
-    .removeEventListener("click", cardinalRun);
+    .removeEventListener("mousedown", cardinalRun);
   document.querySelector("#cardinal_container").classList.add("paused");
   document.querySelector("#cardinal_sprite").classList.add("zoom_out");
   document
@@ -95,14 +97,14 @@ function cardinalGone() {
 
   document
     .querySelector("#cardinal_container")
-    .addEventListener("click", cardinalRun);
+    .addEventListener("mousedown", cardinalRun);
 }
 
 function bishopRun() {
   console.log("bishopRun");
   document
     .querySelector("#bishop_container")
-    .removeEventListener("click", priestRun);
+    .removeEventListener("mousedown", priestRun);
   document.querySelector("#bishop_container").classList.add("paused");
   document.querySelector("#bishop_sprite").classList.add("zoom_out");
   document
@@ -125,14 +127,14 @@ function bishopGone() {
 
   document
     .querySelector("#bishop_container")
-    .addEventListener("click", bishopRun);
+    .addEventListener("mousedown", bishopRun);
 }
 
 function priestRun() {
   console.log("priestRun");
   document
     .querySelector("#priest_container")
-    .removeEventListener("click", priestRun);
+    .removeEventListener("mousedown", priestRun);
   document.querySelector("#priest_container").classList.add("paused");
   document.querySelector("#priest_sprite").classList.add("zoom_out");
   document
@@ -146,7 +148,7 @@ function priestRun1() {
   console.log("priestRun1");
   document
     .querySelector("#priest1_container")
-    .removeEventListener("click", priestRun1);
+    .removeEventListener("mousedown", priestRun1);
   document.querySelector("#priest1_container").classList.add("paused");
   document.querySelector("#priest1_sprite").classList.add("zoom_out");
   document
@@ -169,7 +171,7 @@ function priestGone() {
 
   document
     .querySelector("#priest_container")
-    .addEventListener("click", priestRun);
+    .addEventListener("mousedown", priestRun);
 }
 
 function priestGone1() {
@@ -185,12 +187,14 @@ function priestGone1() {
 
   document
     .querySelector("#priest1_container")
-    .addEventListener("click", priestRun1);
+    .addEventListener("mousedown", priestRun1);
 }
 
 function boyRun() {
   console.log("boyRun");
-  document.querySelector("#boy_container").removeEventListener("click", boyRun);
+  document
+    .querySelector("#boy_container")
+    .removeEventListener("mousedown", boyRun);
 
   document.querySelector("#boy_container").classList.add("paused");
 
@@ -207,7 +211,7 @@ function boyRun1() {
   console.log("boyRun1");
   document
     .querySelector("#boy1_container")
-    .removeEventListener("click", boyRun1);
+    .removeEventListener("mousedown", boyRun1);
 
   document.querySelector("#boy1_container").classList.add("paused");
 
@@ -229,7 +233,9 @@ function boyGone() {
   document.querySelector("#boy_container").classList.remove("falling1");
   document.querySelector("#boy_container").offsetWidth;
   document.querySelector("#boy_container").classList.add("falling1");
-  document.querySelector("#priest_container").addEventListener("click", boyRun);
+  document
+    .querySelector("#priest_container")
+    .addEventListener("mousedown", boyRun);
 }
 
 function boyGone1() {
@@ -241,7 +247,9 @@ function boyGone1() {
   document.querySelector("#boy1_container").classList.remove("falling2");
   document.querySelector("#boy1_container").offsetWidth;
   document.querySelector("#boy1_container").classList.add("falling2");
-  document.querySelector("#boy1_container").addEventListener("click", boyRun1);
+  document
+    .querySelector("#boy1_container")
+    .addEventListener("mousedown", boyRun1);
 }
 
 function incrementPoints() {
