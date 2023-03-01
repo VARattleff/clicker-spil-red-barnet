@@ -262,8 +262,7 @@ function incrementPoints() {
 }
 
 function displayPoints() {
-  document.querySelector("#kill_count").textContent =
-    "Kill Count:" + "" + "" + points;
+  document.querySelector("#kill_count").textContent = points;
 }
 
 function decrementLives() {

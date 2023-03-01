@@ -1,17 +1,17 @@
 .falling1 {
   animation-name: boy1;
-  animation-duration: 5s;
-  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
   animation-iteration-count: infinite;
 }
 
 @keyframes boy1 {
   0% {
-    transform: translate(300%, 100%);
+    transform: translate(300%, 250%);
   }
 
   100% {
-    transform: translate(-500%, 100%);
+    transform: translate(-500%, 250%);
   }
 }
 
@@ -24,11 +24,11 @@
 
 @keyframes boy2 {
   0% {
-    transform: translate(300%, 200%);
+    transform: translate(300%, 300%);
   }
 
   100% {
-    transform: translate(-500%, 400%);
+    transform: translate(-500%, 300%);
   }
 }
 
@@ -51,18 +51,18 @@
 
 .falling4 {
   animation-name: priest2;
-  animation-duration: 8s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes priest2 {
   0% {
-    transform: translate(100%, 0%);
+    transform: translate(-100%, 0%);
   }
 
   100% {
-    transform: translate(-100%, 50%);
+    transform: translate(100%, 0%);
   }
 }
 
@@ -75,11 +75,11 @@
 
 @keyframes bishop {
   0% {
-    transform: translate(100%, 0%);
+    transform: translate(-200%, 200%);
   }
 
   100% {
-    transform: translate(-100%, 50%);
+    transform: translate(500%, 200%);
   }
 }
 
@@ -92,28 +92,28 @@
 
 @keyframes cardinal {
   0% {
-    transform: translate(100%, 0%);
+    transform: translate(-1000%, 200%);
   }
 
   100% {
-    transform: translate(-100%, 50%);
+    transform: translate(1000%, 200%);
   }
 }
 
 .falling7 {
   animation-name: pope;
-  animation-duration: 8s;
+  animation-duration: 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes pope {
   0% {
-    transform: translate(100%, 0%);
+    transform: translate(-1000%, 250%);
   }
 
   100% {
-    transform: translate(-100%, 50%);
+    transform: translate(1000%, 250%);
   }
 }
 
