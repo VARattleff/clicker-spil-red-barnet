@@ -126,6 +126,8 @@ img {
   display: grid;
   justify-content: center;
   align-content: center;
+  background-color: rgb(237, 237, 238);
+  text-align: center;
 }
 
 #game_over.hidden {
@@ -133,6 +135,10 @@ img {
 }
 
 #level_complete.hidden {
+  display: none;
+}
+
+.hidden {
   display: none;
 }
 
@@ -269,4 +275,53 @@ img {
 
 .broken_heart {
   filter: grayscale(75%) blur(0.9px);
+}
+
+#start {
+  grid-area: 1 /1;
+  z-index: 999;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  color: #ffffff;
+}
+
+#time_container {
+  position: absolute;
+  width: 6%;
+  aspect-ratio: 6/30;
+  border: 2px solid black;
+  background-color: rgba(208, 204, 204, 0.383);
+  top: 10%;
+  left: 45%;
+}
+
+#time_sprite {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: limegreen;
+  transform-origin: center bottom;
+}
+
+.shrink {
+  animation-name: shrink_kf;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink_kf {
+  0% {
+    scale: 1 1;
+    background-color: limegreen;
+  }
+  50% {
+    background-color: rgb(255, 230, 0);
+  }
+  100% {
+    scale: 1 0;
+    background-color: red;
+  }
 }

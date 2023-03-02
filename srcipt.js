@@ -1,18 +1,40 @@
 "use strict";
-window.addEventListener("load", start);
 
-let points = 0;
-let lives = 0;
+window.addEventListener("load", ready);
+
+function ready() {
+  console.log("JavaScript ready!");
+  document.querySelector("#btn_start").addEventListener("click", start);
+  document
+    .querySelector("#btn_go_to_start")
+    .addEventListener("click", showStartScreen);
+  document
+    .querySelector("#game_over_button")
+    .addEventListener("click", retryGame);
+
+  document.querySelector("#time_container").addEventListener("click", start);
+}
+
+var points = 0;
+var lives = 0;
 
 function start() {
   points = 0;
   lives = 3;
+  displayPoints();
+
+  document.querySelector("#start").classList.add("hidden");
 
   document
     .querySelector("#game_over_button")
-    .addEventListener("mousedown", restart);
+    .addEventListener("mousedown", start);
+  startAllAnimation();
+  startTimer();
+}
+
+function startAllAnimation() {
   document.querySelector("#boy_container").classList.add("boyrun1");
-  document.querySelector("#priest_container").classList.add("falling3");
+  document.querySelector("#priest_container").classList.add("priest1");
   document
     .querySelector("#boy_container")
     .addEventListener("mousedown", boyRun);
@@ -177,9 +199,13 @@ function priestGone() {
 
   document.querySelector("#priest_sprite").classList.remove("zoom_out");
   document.querySelector("#priest_container").classList.remove("paused");
-  document.querySelector("#priest_container").classList.remove("falling3");
+  document
+    .querySelector("#priest_container")
+    .classList.remove("priest" + randomnumber);
   document.querySelector("#priest_container").offsetWidth;
-  document.querySelector("#priest_container").classList.add("falling3");
+  document
+    .querySelector("#priest_container")
+    .classList.add("priest" + randomnumber);
 
   document
     .querySelector("#priest_container")
@@ -311,7 +337,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 15) {
+  if (points == 5) {
     LevelComplete();
   }
 }
@@ -373,6 +399,46 @@ document.addEventListener("click", () => {
   }, 500);
 });
 
-function restart() {
-  window.location = window.location;
+function showStartScreen() {
+  // fjern hidden fra startskærm og tilføj til game over og level complete
+  document.querySelector("#start").classList.remove("hidden");
+  document.querySelector("#game_over").classList.add("hidden");
+  document.querySelector("#level_complete").classList.add("hidden");
+  resetLives();
+}
+
+function resetLives() {
+  // sæt lives til 3
+  lives = 3;
+  //nulstil visning af liv (hjerte vi ser)
+  document.querySelector("#heart1").classList.remove("broken_heart");
+  document.querySelector("#heart2").classList.remove("broken_heart");
+  document.querySelector("#heart3").classList.remove("broken_heart");
+  document.querySelector("#heart1").classList.add("active_heart");
+  document.querySelector("#heart2").classList.add("active_heart");
+  document.querySelector("#heart3").classList.add("active_heart");
+}
+
+function retryGame() {
+  resetLives();
+  showStartScreen();
+  start();
+}
+
+function startTimer() {
+  // Sæt timer-animationen (shrink) i gang ved at tilføje klassen shrink til time_sprite
+  document.querySelector("#time_sprite").classList.add("shrink");
+
+  // Tilføj en eventlistener som lytter efter at animationen er færdig (animationend) og kalder funktionen timeIsUp
+  document
+    .querySelector("#time_sprite")
+    .addEventListener("animationend", timeIsUp);
+}
+
+function timeIsUp() {
+  if (points >= 5) {
+    levelComplete();
+  } else {
+    gameOver();
+  }
 }

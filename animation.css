@@ -100,41 +100,62 @@
   }
 }
 
-
-
-.falling2 {
-  animation-name: boy2;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy2 {
-  0% {
-    transform: translate(300%, 300%);
-  }
-
-  100% {
-    transform: translate(-500%, 300%);
-  }
-}
-
-.falling3 {
+.priest1 {
   animation-name: priest1;
-  animation-duration: 10s;
+  animation-duration: 9s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes priest1 {
   0% {
-    transform: translate(100%, 300%);
+    transform: translate(300%, 200%);
   }
 
   100% {
-    transform: translate(-200%, 300%);
+    transform: translate(-200%, 200%);
   }
 }
+
+.priest2 {
+  animation-name: priest2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes priest2 {
+  0% {
+    transform: translate(300%, 100%);
+  }
+
+  100% {
+    transform: translate(-500%, 100%);
+  }
+}
+
+.priest3 {
+  animation-name: priest3;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes priest3 {
+  0% {
+    transform: translate(300%, 200%);
+  }
+
+  100% {
+    transform: translate(-500%, 200%);
+  }
+}
+
+
+
+
+
+
 
 .falling4 {
   animation-name: priest2;
