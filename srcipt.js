@@ -316,7 +316,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 5) {
+  if (points == 10) {
     LevelComplete();
   }
 }

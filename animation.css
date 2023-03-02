@@ -1,102 +1,117 @@
 .boyrun1 {
   animation-name: boy11;
-  animation-duration: 7s;
-  animation-timing-function: ease-in;
+  animation-duration: 4s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes boy11 {
   0% {
-    transform: translate(300%, 150%);
+    transform: translate(300%, 200%);
+  }
+
+  50% {
+    transform: translate(-100%, 100%);
   }
 
   100% {
-    transform: translate(-500%, 150%);
+    transform: translate(-500%, 200%);
   }
 }
 
 .boyrun2 {
   animation-name: boy12;
-  animation-duration: 7s;
-  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes boy12 {
   0% {
-    transform: translate(300%, 250%);
+    transform: translate(300%, 200%);
+  }
+
+  25% {
+    transform: translate(100%, 150%);
+  }
+
+  50% {
+    transform: translate(-100%, 100%);
+  }
+
+  75% {
+    transform: translate(-300%, 150%);
   }
 
   100% {
-    transform: translate(-500%, 250%);
+    transform: translate(-500%, -100%);
   }
 }
 
 .boyrun3 {
   animation-name: boy13;
-  animation-duration: 7s;
-  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes boy13 {
   0% {
-    transform: translate(300%, 200%);
+    transform: translate(300%, 100%);
+  }
+
+  25% {
+    transform: translate(100%, 150%);
+  }
+
+  50% {
+    transform: translate(-100%, 100%);
+  }
+
+  75% {
+    transform: translate(-300%, 150%);
   }
 
   100% {
-    transform: translate(-500%, 200%);
+    transform: translate(-500%, 100%);
   }
 }
 
 .boyrun21 {
   animation-name: boy21;
-  animation-duration: 7s;
-  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes boy21 {
   0% {
-    transform: translate(300%, 250%);
+    transform: translate(100%, 200%);
+  }
+
+  50% {
+    transform: translate(-200%, 400%);
   }
 
   100% {
-    transform: translate(-500%, 250%);
+    transform: translate(-500%, 300%);
   }
 }
 
 .boyrun22 {
-  animation-name: boy21;
+  animation-name: boy22;
   animation-duration: 7s;
-  animation-timing-function: ease-in;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes boy21 {
+@keyframes boy22 {
   0% {
     transform: translate(300%, 200%);
   }
 
   100% {
     transform: translate(-500%, 200%);
-  }
-}
-
-.boyrun23 {
-  animation-name: boy22;
-  animation-duration: 7s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy22 {
-  0% {
-    transform: translate(300%, 175%);
-  }
-
-  100% {
-    transform: translate(-500%, 175%);
   }
 }
 
