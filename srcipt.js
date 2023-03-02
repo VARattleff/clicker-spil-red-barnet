@@ -11,7 +11,7 @@ function start() {
   document
     .querySelector("#game_over_button")
     .addEventListener("mousedown", restart);
-  document.querySelector("#boy_container").classList.add("falling1");
+  document.querySelector("#boy_container").classList.add("boyrun1");
   document.querySelector("#priest_container").classList.add("falling3");
   document
     .querySelector("#boy_container")
@@ -20,7 +20,7 @@ function start() {
     .querySelector("#priest_container")
     .addEventListener("mousedown", priestRun);
 
-  document.querySelector("#boy1_container").classList.add("falling2");
+  document.querySelector("#boy1_container").classList.add("boyrun21");
   document.querySelector("#priest1_container").classList.add("falling4");
   document
     .querySelector("#boy1_container")
@@ -43,7 +43,9 @@ function start() {
     .addEventListener("mousedown", popeRun);
 
   document.querySelector("#boy3_container").classList.add("falling8");
-  document.querySelector("mousedown", boyRun3);
+  document
+    .querySelector("#boy3_container")
+    .addEventListener("mousedown", boyRun3);
 }
 
 function popeRun() {
@@ -61,6 +63,7 @@ function popeRun() {
 }
 
 function popeGone() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#pope_container")
     .removeEventListener("animationend", popeGone);
@@ -91,6 +94,7 @@ function cardinalRun() {
 }
 
 function cardinalGone() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#cardinal_container")
     .removeEventListener("animationend", cardinalGone);
@@ -121,6 +125,7 @@ function bishopRun() {
 }
 
 function bishopGone() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#bishop_container")
     .removeEventListener("animationend", bishopGone);
@@ -165,6 +170,7 @@ function priestRun1() {
 }
 
 function priestGone() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#priest_container")
     .removeEventListener("animationend", priestGone);
@@ -181,6 +187,7 @@ function priestGone() {
 }
 
 function priestGone1() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#priest1_container")
     .removeEventListener("animationend", priestGone1);
@@ -230,14 +237,19 @@ function boyRun1() {
 }
 
 function boyGone() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#boy_container")
     .removeEventListener("animationend", boyGone);
   document.querySelector("#boy_sprite").classList.remove("zoom_out");
   document.querySelector("#boy_container").classList.remove("paused");
-  document.querySelector("#boy_container").classList.remove("falling1");
+  document
+    .querySelector("#boy_container")
+    .classList.remove("boyrun" + randomnumber);
   document.querySelector("#boy_container").offsetWidth;
-  document.querySelector("#boy_container").classList.add("falling1");
+  document
+    .querySelector("#boy_container")
+    .classList.add("boyrun" + randomnumber);
   document
     .querySelector("#boy_container")
     .addEventListener("mousedown", boyRun);
@@ -261,6 +273,7 @@ function boyRun3() {
 }
 
 function boyGone3() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#boy3_container")
     .removeEventListener("animationend", boyGone3);
@@ -275,14 +288,19 @@ function boyGone3() {
 }
 
 function boyGone1() {
+  let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#boy1_container")
-    .removeEventListener("animationend", boyGone1);
+    .removeEventListener("animationend", boyGone);
   document.querySelector("#boy1_sprite").classList.remove("zoom_out");
   document.querySelector("#boy1_container").classList.remove("paused");
-  document.querySelector("#boy1_container").classList.remove("falling8");
+  document
+    .querySelector("#boy1_container")
+    .classList.remove("boyrun2" + randomnumber);
   document.querySelector("#boy1_container").offsetWidth;
-  document.querySelector("#boy1_container").classList.add("falling8");
+  document
+    .querySelector("#boy1_container")
+    .classList.add("boyrun2" + randomnumber);
   document
     .querySelector("#boy1_container")
     .addEventListener("mousedown", boyRun1);
