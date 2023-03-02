@@ -151,20 +151,31 @@
   }
 }
 
-
-
-
-
-
-
-.falling4 {
-  animation-name: priest2;
+.priest21 {
+  animation-name: priest21;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes priest2 {
+@keyframes priest21 {
+  0% {
+    transform: translate(-100%, 200%);
+  }
+
+  100% {
+    transform: translate(100%, 200%);
+  }
+}
+
+.priest22 {
+  animation-name: priest22;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes priest22 {
   0% {
     transform: translate(-100%, 100%);
   }
@@ -174,31 +185,99 @@
   }
 }
 
-.falling5 {
-  animation-name: bishop;
-  animation-duration: 2s;
+.priest23 {
+  animation-name: priest23;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes bishop {
+@keyframes priest23 {
   0% {
-    transform: translate(-200%, 300%);
+    transform: translate(-100%, 300%);
   }
 
   100% {
-    transform: translate(500%, 300%);
+    transform: translate(100%, 300%);
   }
 }
 
-.falling6 {
-  animation-name: cardinal;
+.bishop1 {
+  animation-name: bishop1;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes cardinal {
+@keyframes bishop1 {
+  0% {
+    transform: translate(200%, 300%);
+  }
+
+  100% {
+    transform: translate(-500%, 300%);
+  }
+}
+
+.bishop2 {
+  animation-name: bishop2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bishop2 {
+  0% {
+    transform: translate(-200%, 100%);
+  }
+
+  100% {
+    transform: translate(500%, 100%);
+  }
+}
+
+.bishop3 {
+  animation-name: bishop3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bishop3 {
+  0% {
+    transform: translate(-200%, 200%);
+  }
+
+  100% {
+    transform: translate(500%, 200%);
+  }
+}
+
+.cardinal1 {
+  animation-name: cardinal1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cardinal1 {
+  0% {
+    transform: translate(400%, 250%);
+  }
+
+  100% {
+    transform: translate(-400%, 250%);
+  }
+}
+
+.cardina2 {
+  animation-name: cardinal2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cardinal2 {
   0% {
     transform: translate(-400%, 250%);
   }
@@ -208,37 +287,122 @@
   }
 }
 
-.falling7 {
-  animation-name: pope;
+.cardinal3 {
+  animation-name: cardinal3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cardinal3 {
+  0% {
+    transform: translate(-400%, 300%);
+  }
+
+  100% {
+    transform: translate(400%, 300%);
+  }
+}
+
+.pope1 {
+  animation-name: pope1;
   animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
-@keyframes pope {
+@keyframes pope1 {
   0% {
-    transform: translate(-1000%, 250%);
+    transform: translate(1000%, 250%);
   }
 
   100% {
-    transform: translate(1000%, 250%);
+    transform: translate(-1000%, 250%);
   }
 }
 
-.falling8 {
-  animation-name: steveRun;
+.pope2 {
+  animation-name: pope2;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pope2 {
+  0% {
+    transform: translate(1000%, 250%);
+  }
+
+  100% {
+    transform: translate(-1000%, 250%);
+  }
+}
+
+.pope3 {
+  animation-name: pope3;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pope3 {
+  0% {
+    transform: translate(-1000%, 300%);
+  }
+
+  100% {
+    transform: translate(1000%, 300%);
+  }
+}
+
+.boy31 {
+  animation-name: boy31;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes steveRun {
+@keyframes boy31 {
   0% {
     transform: translate(-300%, 250%);
   }
 
   100% {
     transform: translate(500%, 250%);
+  }
+}
+
+.boy32 {
+  animation-name: boy32;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boy32 {
+  0% {
+    transform: translate(-300%, 300%);
+  }
+
+  100% {
+    transform: translate(500%, 300%);
+  }
+}
+
+.boy32 {
+  animation-name: boy32;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boy32 {
+  0% {
+    transform: translate(300%, 250%);
+  }
+
+  100% {
+    transform: translate(-500%, 250%);
   }
 }
 

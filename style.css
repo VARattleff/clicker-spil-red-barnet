@@ -186,17 +186,6 @@ img {
   filter: drop-shadow(0 0 20px rgb(253, 3, 3));
 }
 
-#preist1_container {
-  position: absolute;
-  top: 0;
-  left: 50vw;
-}
-
-#priest1_sprite {
-  width: 15%;
-  filter: drop-shadow(0 0 20px rgb(253, 3, 3));
-}
-
 #bishop_container {
   position: absolute;
   top: 0;
@@ -290,7 +279,6 @@ img {
   position: absolute;
   width: 23%;
   aspect-ratio: 6/30;
-  border: 2px solid black;
   background-color: rgba(208, 204, 204, 0.383);
   top: 12%;
   left: 45%;
@@ -307,7 +295,7 @@ img {
 
 .shrink {
   animation-name: shrink_kf;
-  animation-duration: 10s;
+  animation-duration: 30s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

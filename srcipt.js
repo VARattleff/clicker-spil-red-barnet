@@ -41,17 +41,13 @@ function startAllAnimation() {
     .addEventListener("mousedown", priestRun);
 
   document.querySelector("#boy1_container").classList.add("boyrun21");
-  document.querySelector("#priest1_container").classList.add("falling4");
   document
     .querySelector("#boy1_container")
     .addEventListener("mousedown", boyRun1);
-  document
-    .querySelector("#priest1_container")
-    .addEventListener("mousedown", priestRun1);
 
-  document.querySelector("#bishop_container").classList.add("falling5");
-  document.querySelector("#cardinal_container").classList.add("falling6");
-  document.querySelector("#pope_container").classList.add("falling7");
+  document.querySelector("#bishop_container").classList.add("bishop1");
+  document.querySelector("#cardinal_container").classList.add("cardinal1");
+  document.querySelector("#pope_container").classList.add("pope1");
   document
     .querySelector("#bishop_container")
     .addEventListener("mousedown", bishopRun);
@@ -62,7 +58,7 @@ function startAllAnimation() {
     .querySelector("#pope_container")
     .addEventListener("mousedown", popeRun);
 
-  document.querySelector("#boy3_container").classList.add("falling8");
+  document.querySelector("#boy3_container").classList.add("boy31");
   document
     .querySelector("#boy3_container")
     .addEventListener("mousedown", boyRun3);
@@ -90,9 +86,13 @@ function popeGone() {
 
   document.querySelector("#pope_sprite").classList.remove("zoom_out");
   document.querySelector("#pope_container").classList.remove("paused");
-  document.querySelector("#pope_container").classList.remove("falling7");
+  document
+    .querySelector("#pope_container")
+    .classList.remove("pope" + randomnumber);
   document.querySelector("#pope_container").offsetWidth;
-  document.querySelector("#pope_container").classList.add("falling7");
+  document
+    .querySelector("#pope_container")
+    .classList.add("pope" + randomnumber);
 
   document
     .querySelector("#pope_container")
@@ -121,9 +121,13 @@ function cardinalGone() {
 
   document.querySelector("#cardinal_sprite").classList.remove("zoom_out");
   document.querySelector("#cardinal_container").classList.remove("paused");
-  document.querySelector("#cardinal_container").classList.remove("falling6");
+  document
+    .querySelector("#cardinal_container")
+    .classList.remove("cardinal" + randomnumber);
   document.querySelector("#cardinal_container").offsetWidth;
-  document.querySelector("#cardinal_container").classList.add("falling6");
+  document
+    .querySelector("#cardinal_container")
+    .classList.add("cardinal" + randomnumber);
 
   document
     .querySelector("#cardinal_container")
@@ -152,9 +156,13 @@ function bishopGone() {
 
   document.querySelector("#bishop_sprite").classList.remove("zoom_out");
   document.querySelector("#bishop_container").classList.remove("paused");
-  document.querySelector("#bishop_container").classList.remove("falling5");
+  document
+    .querySelector("#bishop_container")
+    .classList.remove("bishop" + randomnumber);
   document.querySelector("#bishop_container").offsetWidth;
-  document.querySelector("#bishop_container").classList.add("falling5");
+  document
+    .querySelector("#bishop_container")
+    .classList.add("bishop" + randomnumber);
 
   document
     .querySelector("#bishop_container")
@@ -171,20 +179,6 @@ function priestRun() {
   document
     .querySelector("#priest_container")
     .addEventListener("animationend", priestGone);
-
-  incrementPoints();
-}
-
-function priestRun1() {
-  console.log("priestRun1");
-  document
-    .querySelector("#priest1_container")
-    .removeEventListener("mousedown", priestRun1);
-  document.querySelector("#priest1_container").classList.add("paused");
-  document.querySelector("#priest1_sprite").classList.add("zoom_out");
-  document
-    .querySelector("#priest1_container")
-    .addEventListener("animationend", priestGone1);
 
   incrementPoints();
 }
@@ -208,23 +202,6 @@ function priestGone() {
   document
     .querySelector("#priest_container")
     .addEventListener("mousedown", priestRun);
-}
-
-function priestGone1() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
-  document
-    .querySelector("#priest1_container")
-    .removeEventListener("animationend", priestGone1);
-
-  document.querySelector("#priest1_sprite").classList.remove("zoom_out");
-  document.querySelector("#priest1_container").classList.remove("paused");
-  document.querySelector("#priest1_container").classList.remove("falling4");
-  document.querySelector("#priest1_container").offsetWidth;
-  document.querySelector("#priest1_container").classList.add("falling4");
-
-  document
-    .querySelector("#priest1_container")
-    .addEventListener("mousedown", priestRun1);
 }
 
 function boyRun() {
@@ -303,9 +280,13 @@ function boyGone3() {
     .removeEventListener("animationend", boyGone3);
   document.querySelector("#boy3_sprite").classList.remove("zoom_out");
   document.querySelector("#boy3_container").classList.remove("paused");
-  document.querySelector("#boy3_container").classList.remove("falling8");
+  document
+    .querySelector("#boy3_container")
+    .classList.remove("boy3" + randomnumber);
   document.querySelector("#boy3_container").offsetWidth;
-  document.querySelector("#boy3_container").classList.add("falling8");
+  document
+    .querySelector("#boy3_container")
+    .classList.add("boy3" + randomnumber);
   document
     .querySelector("#boy3_container")
     .addEventListener("mousedown", boyRun3);
