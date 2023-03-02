@@ -2,6 +2,9 @@
 
 window.addEventListener("load", ready);
 
+var points = 0;
+var lives = 0;
+
 function ready() {
   console.log("JavaScript ready!");
   document.querySelector("#btn_start").addEventListener("click", start);
@@ -11,12 +14,7 @@ function ready() {
   document
     .querySelector("#game_over_button")
     .addEventListener("click", retryGame);
-
-  document.querySelector("#time_container").addEventListener("click", start);
 }
-
-var points = 0;
-var lives = 0;
 
 function start() {
   points = 0;
@@ -405,6 +403,7 @@ function showStartScreen() {
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
   resetLives();
+  resetTimer();
 }
 
 function resetLives() {
@@ -423,13 +422,12 @@ function retryGame() {
   resetLives();
   showStartScreen();
   start();
+  resetTimer();
 }
 
 function startTimer() {
-  // Sæt timer-animationen (shrink) i gang ved at tilføje klassen shrink til time_sprite
   document.querySelector("#time_sprite").classList.add("shrink");
 
-  // Tilføj en eventlistener som lytter efter at animationen er færdig (animationend) og kalder funktionen timeIsUp
   document
     .querySelector("#time_sprite")
     .addEventListener("animationend", timeIsUp);
@@ -441,4 +439,16 @@ function timeIsUp() {
   } else {
     gameOver();
   }
+}
+
+function resetTimer() {
+  document
+    .querySelector("#time_sprite")
+    .removeEventListener("animationend", timeIsUp);
+  document.querySelector("#time_sprite").classList.remove("shrink");
+  document.querySelector("#time_sprite").offsetWidth;
+  document.querySelector("#time_sprite").classList.add("shrink");
+  document
+    .querySelector("#time_sprite")
+    .addEventListener("animationend", timeIsUp);
 }

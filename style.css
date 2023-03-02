@@ -306,7 +306,7 @@ img {
 
 .shrink {
   animation-name: shrink_kf;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
