@@ -316,7 +316,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 10) {
+  if (points == 20) {
     LevelComplete();
   }
 }
@@ -379,7 +379,6 @@ document.addEventListener("click", () => {
 });
 
 function showStartScreen() {
-  // fjern hidden fra startskærm og tilføj til game over og level complete
   document.querySelector("#start").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
@@ -388,9 +387,7 @@ function showStartScreen() {
 }
 
 function resetLives() {
-  // sæt lives til 3
   lives = 3;
-  //nulstil visning af liv (hjerte vi ser)
   document.querySelector("#heart1").classList.remove("broken_heart");
   document.querySelector("#heart2").classList.remove("broken_heart");
   document.querySelector("#heart3").classList.remove("broken_heart");
@@ -415,7 +412,7 @@ function startTimer() {
 }
 
 function timeIsUp() {
-  if (points >= 5) {
+  if (points >= 20) {
     levelComplete();
   } else {
     gameOver();

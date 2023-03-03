@@ -271,16 +271,19 @@ img {
   z-index: 999;
   justify-content: center;
   align-content: center;
-  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
   color: #ffffff;
+  background-image: url(img/startscreen.jpg);
+  background-size: cover;
+  aspect-ratio: 16/9;
 }
 
 #time_container {
   position: absolute;
-  width: 23%;
+  height: 200%;
+  width: 2%;
   aspect-ratio: 6/30;
   background-color: rgba(208, 204, 204, 0.383);
-  top: 12%;
+  top: -5%;
   left: 45%;
   transform: rotate(90deg);
 }
@@ -313,4 +316,34 @@ img {
     scale: 1 0;
     background-color: red;
   }
+}
+
+#btn_start {
+  position: absolute;
+  background-color: rgb(119, 18, 18);
+  margin-left: 47%;
+  margin-right: 45%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 35%;
+  color: white;
+  font-size: 80px;
+  top: 52%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+}
+
+#text1 {
+  position: absolute;
+  font-size: 50px;
+  margin-left: 27%;
+  margin-right: 25%;
+  top: 10%;
+}
+
+#text2 {
+  position: absolute;
+  font-size: 50px;
+  margin-left: 27%;
+  margin-right: 25%;
+  top: 25%;
 }

@@ -226,7 +226,7 @@
 
 @keyframes bishop1 {
   0% {
-    transform: translate(200%, 300%);
+    transform: translate(600%, 300%);
   }
 
   100% {
