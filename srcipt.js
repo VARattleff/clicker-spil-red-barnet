@@ -352,8 +352,8 @@ function showIncrementedLives() {
 }
 
 function gameOver() {
-  console.log("gameOver");
   document.querySelector("#game_over").classList.remove("hidden");
+  console.log("gameOver");
 }
 
 function LevelComplete() {
