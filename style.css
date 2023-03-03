@@ -330,20 +330,88 @@ img {
   font-size: 80px;
   top: 52%;
   filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+  color: green;
 }
 
 #text1 {
   position: absolute;
   font-size: 50px;
-  margin-left: 27%;
-  margin-right: 25%;
+  margin-left: 7%;
+  margin-right: 75%;
   top: 10%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
 }
 
 #text2 {
   position: absolute;
   font-size: 50px;
-  margin-left: 27%;
+  margin-left: 34%;
   margin-right: 25%;
   top: 25%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+}
+
+#text3 {
+  position: absolute;
+  font-size: 50px;
+  margin-left: 75%;
+  margin-right: 5%;
+  top: 10%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+}
+
+#text4 {
+  position: absolute;
+  font-size: 150px;
+  margin-left: 34%;
+  white-space: nowrap;
+  top: 10%;
+  filter: drop-shadow(0 0 20px rgb(86, 7, 234));
+}
+
+.text_pulse {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulsetext 2s infinite;
+}
+
+@keyframes pulsetext {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.button_pulse {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulsebutton 3s infinite;
+  animation-iteration-count: linear;
+}
+
+@keyframes pulsebutton {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
