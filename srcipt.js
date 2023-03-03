@@ -57,14 +57,14 @@ function startAllAnimation() {
     .querySelector("#priest_container")
     .addEventListener("mousedown", priestRun);
 
-  document.querySelector("#boy1_container").classList.add("boyrun21");
+  document.querySelector("#boy1_container").classList.add("boyrun2");
   document
     .querySelector("#boy1_container")
     .addEventListener("mousedown", boyRun1);
 
-  document.querySelector("#bishop_container").classList.add("bishop1");
-  document.querySelector("#cardinal_container").classList.add("cardinal1");
-  document.querySelector("#pope_container").classList.add("pope1");
+  document.querySelector("#bishop_container").classList.add("bishop");
+  document.querySelector("#cardinal_container").classList.add("cardinal");
+  document.querySelector("#pope_container").classList.add("pope");
   document
     .querySelector("#bishop_container")
     .addEventListener("mousedown", bishopRun);
@@ -75,7 +75,7 @@ function startAllAnimation() {
     .querySelector("#pope_container")
     .addEventListener("mousedown", popeRun);
 
-  document.querySelector("#boy3_container").classList.add("boy31");
+  document.querySelector("#boy3_container").classList.add("boy3");
   document
     .querySelector("#boy3_container")
     .addEventListener("mousedown", boyRun3);
@@ -96,20 +96,16 @@ function popeRun() {
 }
 
 function popeGone() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#pope_container")
     .removeEventListener("animationend", popeGone);
 
   document.querySelector("#pope_sprite").classList.remove("zoom_out");
   document.querySelector("#pope_container").classList.remove("paused");
-  document
-    .querySelector("#pope_container")
-    .classList.remove("pope" + randomnumber);
+  document.querySelector("#pope_container").classList.remove("pope");
   document.querySelector("#pope_container").offsetWidth;
-  document
-    .querySelector("#pope_container")
-    .classList.add("pope" + randomnumber);
+  document.querySelector("#pope_container").classList.add("pope");
 
   document
     .querySelector("#pope_container")
@@ -131,20 +127,16 @@ function cardinalRun() {
 }
 
 function cardinalGone() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#cardinal_container")
     .removeEventListener("animationend", cardinalGone);
 
   document.querySelector("#cardinal_sprite").classList.remove("zoom_out");
   document.querySelector("#cardinal_container").classList.remove("paused");
-  document
-    .querySelector("#cardinal_container")
-    .classList.remove("cardinal" + randomnumber);
+  document.querySelector("#cardinal_container").classList.remove("cardinal");
   document.querySelector("#cardinal_container").offsetWidth;
-  document
-    .querySelector("#cardinal_container")
-    .classList.add("cardinal" + randomnumber);
+  document.querySelector("#cardinal_container").classList.add("cardinal");
 
   document
     .querySelector("#cardinal_container")
@@ -166,20 +158,16 @@ function bishopRun() {
 }
 
 function bishopGone() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#bishop_container")
     .removeEventListener("animationend", bishopGone);
 
   document.querySelector("#bishop_sprite").classList.remove("zoom_out");
   document.querySelector("#bishop_container").classList.remove("paused");
-  document
-    .querySelector("#bishop_container")
-    .classList.remove("bishop" + randomnumber);
+  document.querySelector("#bishop_container").classList.remove("bishop");
   document.querySelector("#bishop_container").offsetWidth;
-  document
-    .querySelector("#bishop_container")
-    .classList.add("bishop" + randomnumber);
+  document.querySelector("#bishop_container").classList.add("bishop");
 
   document
     .querySelector("#bishop_container")
@@ -201,20 +189,16 @@ function priestRun() {
 }
 
 function priestGone() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#priest_container")
     .removeEventListener("animationend", priestGone);
 
   document.querySelector("#priest_sprite").classList.remove("zoom_out");
   document.querySelector("#priest_container").classList.remove("paused");
-  document
-    .querySelector("#priest_container")
-    .classList.remove("priest" + randomnumber);
+  document.querySelector("#priest_container").classList.remove("priest1");
   document.querySelector("#priest_container").offsetWidth;
-  document
-    .querySelector("#priest_container")
-    .classList.add("priest" + randomnumber);
+  document.querySelector("#priest_container").classList.add("priest1");
 
   document
     .querySelector("#priest_container")
@@ -222,20 +206,66 @@ function priestGone() {
 }
 
 function boyRun() {
+  console.log("boyRun");
   document
     .querySelector("#boy_container")
-    .removeEventListener("mousedown", boyRun);
-
+    .removeEventListener("mousedown", priestRun);
   document.querySelector("#boy_container").classList.add("paused");
-
   document.querySelector("#boy_sprite").classList.add("zoom_out");
-
   document
     .querySelector("#boy_container")
     .addEventListener("animationend", boyGone);
 
-  decrementLives();
+  incrementPoints();
 }
+
+function boyGone() {
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
+  document
+    .querySelector("#boy_container")
+    .removeEventListener("animationend", boyGone);
+
+  document.querySelector("#boy_sprite").classList.remove("zoom_out");
+  document.querySelector("#boy_container").classList.remove("paused");
+  document.querySelector("#boy_container").classList.remove("boyrun1");
+  document.querySelector("#boy_container").offsetWidth;
+  document.querySelector("#boy_container").classList.add("boyrun1");
+
+  document
+    .querySelector("#boy_container")
+    .addEventListener("mousedown", boyRun);
+}
+
+// function boyRun() {
+//   document
+//     .querySelector("#boy_container")
+//     .removeEventListener("mousedown", boyRun);
+
+//   document.querySelector("#boy_container").classList.add("paused");
+
+//   document.querySelector("#boy_container").classList.add("zoom_out");
+
+//   document
+//     .querySelector("#boy_container")
+//     .addEventListener("animationend", boyGone);
+
+//   decrementLives();
+// }
+
+// function boyGone() {
+//   // let randomnumber = Math.floor(Math.random() * 3) + 1;
+//   document
+//     .querySelector("#boy_container")
+//     .removeEventListener("animationend", boyGone);
+//   document.querySelector("#boy_container").classList.remove("zoom_out");
+//   document.querySelector("#boy_container").classList.remove("paused");
+//   document.querySelector("#boy_container").classList.remove("boyrun");
+//   document.querySelector("#boy_container").offsetWidth;
+//   document.querySelector("#boy_container").classList.add("boyrun");
+//   document
+//     .querySelector("#boy_container")
+//     .addEventListener("mousedown", boyRun);
+// }
 
 function boyRun1() {
   console.log("boyRun1");
@@ -252,25 +282,6 @@ function boyRun1() {
     .addEventListener("animationend", boyGone1);
 
   decrementLives();
-}
-
-function boyGone() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
-  document
-    .querySelector("#boy_container")
-    .removeEventListener("animationend", boyGone);
-  document.querySelector("#boy_sprite").classList.remove("zoom_out");
-  document.querySelector("#boy_container").classList.remove("paused");
-  document
-    .querySelector("#boy_container")
-    .classList.remove("boyrun" + randomnumber);
-  document.querySelector("#boy_container").offsetWidth;
-  document
-    .querySelector("#boy_container")
-    .classList.add("boyrun" + randomnumber);
-  document
-    .querySelector("#boy_container")
-    .addEventListener("mousedown", boyRun);
 }
 
 function boyRun3() {
@@ -291,38 +302,30 @@ function boyRun3() {
 }
 
 function boyGone3() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#boy3_container")
     .removeEventListener("animationend", boyGone3);
   document.querySelector("#boy3_sprite").classList.remove("zoom_out");
   document.querySelector("#boy3_container").classList.remove("paused");
-  document
-    .querySelector("#boy3_container")
-    .classList.remove("boy3" + randomnumber);
+  document.querySelector("#boy3_container").classList.remove("boy3");
   document.querySelector("#boy3_container").offsetWidth;
-  document
-    .querySelector("#boy3_container")
-    .classList.add("boy3" + randomnumber);
+  document.querySelector("#boy3_container").classList.add("boy3");
   document
     .querySelector("#boy3_container")
     .addEventListener("mousedown", boyRun3);
 }
 
 function boyGone1() {
-  let randomnumber = Math.floor(Math.random() * 3) + 1;
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
     .querySelector("#boy1_container")
     .removeEventListener("animationend", boyGone);
   document.querySelector("#boy1_sprite").classList.remove("zoom_out");
   document.querySelector("#boy1_container").classList.remove("paused");
-  document
-    .querySelector("#boy1_container")
-    .classList.remove("boyrun2" + randomnumber);
+  document.querySelector("#boy1_container").classList.remove("boyrun2");
   document.querySelector("#boy1_container").offsetWidth;
-  document
-    .querySelector("#boy1_container")
-    .classList.add("boyrun2" + randomnumber);
+  document.querySelector("#boy1_container").classList.add("boyrun2");
   document
     .querySelector("#boy1_container")
     .addEventListener("mousedown", boyRun1);

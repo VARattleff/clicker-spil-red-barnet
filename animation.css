@@ -19,7 +19,7 @@
   }
 }
 
-.boyrun2 {
+/* .boyrun2 {
   animation-name: boy12;
   animation-duration: 8s;
   animation-timing-function: linear;
@@ -75,9 +75,9 @@
   100% {
     transform: translate(-500%, 100%);
   }
-}
+} */
 
-.boyrun21 {
+.boyrun2 {
   animation-name: boy21;
   animation-duration: 8s;
   animation-timing-function: linear;
@@ -98,7 +98,7 @@
   }
 }
 
-.boyrun22 {
+/* .boyrun22 {
   animation-name: boy22;
   animation-duration: 7s;
   animation-timing-function: linear;
@@ -113,7 +113,7 @@
   100% {
     transform: translate(-500%, 200%);
   }
-}
+} */
 
 .priest1 {
   animation-name: priest1;
@@ -132,7 +132,7 @@
   }
 }
 
-.priest2 {
+/* .priest2 {
   animation-name: priest2;
   animation-duration: 6s;
   animation-timing-function: linear;
@@ -164,9 +164,9 @@
   100% {
     transform: translate(-500%, 200%);
   }
-}
+} */
 
-.priest21 {
+.priest2 {
   animation-name: priest21;
   animation-duration: 8s;
   animation-timing-function: linear;
@@ -183,7 +183,7 @@
   }
 }
 
-.priest22 {
+/* .priest22 {
   animation-name: priest22;
   animation-duration: 9s;
   animation-timing-function: linear;
@@ -215,9 +215,9 @@
   100% {
     transform: translate(100%, 300%);
   }
-}
+} */
 
-.bishop1 {
+.bishop {
   animation-name: bishop1;
   animation-duration: 18s;
   animation-timing-function: linear;
@@ -234,7 +234,7 @@
   }
 }
 
-.bishop2 {
+/* .bishop2 {
   animation-name: bishop2;
   animation-duration: 8s;
   animation-timing-function: linear;
@@ -256,7 +256,7 @@
   animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
+} */
 
 @keyframes bishop3 {
   0% {
@@ -268,7 +268,7 @@
   }
 }
 
-.cardinal1 {
+.cardinal {
   animation-name: cardinal1;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -285,7 +285,7 @@
   }
 }
 
-.cardina2 {
+/* .cardina2 {
   animation-name: cardinal2;
   animation-duration: 8s;
   animation-timing-function: linear;
@@ -317,9 +317,9 @@
   100% {
     transform: translate(400%, 300%);
   }
-}
+} */
 
-.pope1 {
+.pope {
   animation-name: pope1;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
@@ -336,7 +336,7 @@
   }
 }
 
-.pope2 {
+/* .pope2 {
   animation-name: pope2;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
@@ -368,9 +368,9 @@
   100% {
     transform: translate(1000%, 300%);
   }
-}
+} */
 
-.boy31 {
+.boy3 {
   animation-name: boy31;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -387,7 +387,7 @@
   }
 }
 
-.boy32 {
+/* .boy32 {
   animation-name: boy32;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -421,6 +421,8 @@
   }
 }
 
+*/
+
 .zoom_out {
   animation-name: zoom_out;
   animation-duration: 1ms;
@@ -437,4 +439,8 @@
   100% {
     transform: scale(0.1);
   }
+}
+
+.paused {
+  animation-play-state: paused;
 }
