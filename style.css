@@ -99,7 +99,10 @@ img {
   position: relative;
 }
 
-#game_over {
+#level_complete {
+  background-image: url(img/heaven.jpg);
+  aspect-ratio: 16/9;
+  background-size: cover;
   grid-area: 1 /1;
   z-index: 999;
   display: grid;
@@ -109,25 +112,37 @@ img {
   text-align: center;
 }
 
-#game_over_button {
-  background-color: black;
-  margin-left: 40%;
+#btn_go_to_start {
+  position: absolute;
+  background-color: rgb(16, 133, 26);
+  margin-left: 45.5%;
   margin-right: 40%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
   border-radius: 50%;
   color: white;
   font-size: 80px;
+  top: 21%;
 }
 
-#level_complete {
-  grid-area: 1 /1;
-  z-index: 999;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(237, 237, 238);
-  text-align: center;
+#level_complete_1 {
+  position: absolute;
+  font-size: 250px;
+  margin-left: 26%;
+  top: -3%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+  white-space: nowrap;
+}
+
+#level_complete_2 {
+  position: absolute;
+  font-size: 80px;
+  margin-left: 31%;
+  top: 14%;
+  filter: drop-shadow(0 0 20px rgb(30, 234, 7));
+  white-space: nowrap;
 }
 
 #game_over.hidden {
@@ -136,6 +151,54 @@ img {
 
 #level_complete.hidden {
   display: none;
+}
+
+#game_over {
+  background-image: url(img/hell.jpg);
+  aspect-ratio: 16/9;
+  background-size: cover;
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#game_over_button {
+  position: absolute;
+  background-color: rgb(16, 133, 26);
+  margin-left: 45%;
+  margin-right: 40%;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  border-radius: 80%;
+  color: white;
+  font-size: 80px;
+  top: 19%;
+}
+#game_over_1 {
+  position: absolute;
+  font-size: 400px;
+  margin-left: 22%;
+  margin-right: 75%;
+  top: -7%;
+  filter: drop-shadow(0 0 10px rgb(30, 234, 7));
+  white-space: nowrap;
+  color: white;
+}
+
+#game_over_2 {
+  position: absolute;
+  font-size: 50px;
+  margin-left: 12%;
+  margin-right: 75%;
+  top: 27%;
+  filter: drop-shadow(0 0 10px rgb(30, 234, 7));
+  white-space: nowrap;
+  color: white;
 }
 
 .hidden {
@@ -283,7 +346,7 @@ img {
   width: 2%;
   aspect-ratio: 6/30;
   background-color: rgba(208, 204, 204, 0.383);
-  top: -5%;
+  top: -4%;
   left: 45%;
   transform: rotate(90deg);
 }
