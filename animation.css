@@ -1,6 +1,6 @@
 .boyrun1 {
   animation-name: boy11;
-  animation-duration: 4s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -21,7 +21,7 @@
 
 .boyrun2 {
   animation-name: boy12;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -50,7 +50,7 @@
 
 .boyrun3 {
   animation-name: boy13;
-  animation-duration: 3s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -79,7 +79,7 @@
 
 .boyrun21 {
   animation-name: boy21;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -134,7 +134,7 @@
 
 .priest2 {
   animation-name: priest2;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -168,7 +168,7 @@
 
 .priest21 {
   animation-name: priest21;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -185,7 +185,7 @@
 
 .priest22 {
   animation-name: priest22;
-  animation-duration: 5s;
+  animation-duration: 9s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -202,7 +202,7 @@
 
 .priest23 {
   animation-name: priest23;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -219,7 +219,7 @@
 
 .bishop1 {
   animation-name: bishop1;
-  animation-duration: 2s;
+  animation-duration: 18s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -236,7 +236,7 @@
 
 .bishop2 {
   animation-name: bishop2;
-  animation-duration: 2s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -253,7 +253,7 @@
 
 .bishop3 {
   animation-name: bishop3;
-  animation-duration: 2s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -270,7 +270,7 @@
 
 .cardinal1 {
   animation-name: cardinal1;
-  animation-duration: 2s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -287,7 +287,7 @@
 
 .cardina2 {
   animation-name: cardinal2;
-  animation-duration: 2s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -304,7 +304,7 @@
 
 .cardinal3 {
   animation-name: cardinal3;
-  animation-duration: 2s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -321,7 +321,7 @@
 
 .pope1 {
   animation-name: pope1;
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }

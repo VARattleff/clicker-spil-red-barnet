@@ -5,6 +5,23 @@ window.addEventListener("load", ready);
 var points = 0;
 var lives = 0;
 
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 30) + "px; left: " + (e.pageX - 30) + "px;"
+  );
+});
+
+document.addEventListener("mousedown", () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
+});
+
 function ready() {
   console.log("JavaScript ready!");
   document.querySelector("#btn_start").addEventListener("click", start);
@@ -360,23 +377,6 @@ function LevelComplete() {
   console.log("levelComplete");
   document.querySelector("#level_complete").classList.remove("hidden");
 }
-
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY - 30) + "px; left: " + (e.pageX - 30) + "px;"
-  );
-});
-
-document.addEventListener("click", () => {
-  cursor.classList.add("expand");
-
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
 
 function showStartScreen() {
   document.querySelector("#start").classList.remove("hidden");
