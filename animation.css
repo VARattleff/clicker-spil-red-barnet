@@ -1,6 +1,6 @@
 .boyrun1 {
   animation-name: boy11;
-  animation-duration: 10s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -79,7 +79,7 @@
 
 .boyrun2 {
   animation-name: boy21;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -117,7 +117,7 @@
 
 .priest1 {
   animation-name: priest1;
-  animation-duration: 9s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -168,7 +168,7 @@
 
 .priest2 {
   animation-name: priest21;
-  animation-duration: 8s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -219,7 +219,7 @@
 
 .bishop {
   animation-name: bishop1;
-  animation-duration: 18s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -270,7 +270,7 @@
 
 .cardinal {
   animation-name: cardinal1;
-  animation-duration: 10s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -372,7 +372,7 @@
 
 .boy3 {
   animation-name: boy31;
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }

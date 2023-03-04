@@ -216,7 +216,7 @@ function boyRun() {
     .querySelector("#boy_container")
     .addEventListener("animationend", boyGone);
 
-  incrementPoints();
+  decrementLives();
 }
 
 function boyGone() {
