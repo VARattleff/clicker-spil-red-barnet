@@ -5,6 +5,8 @@ window.addEventListener("load", ready);
 var points = 0;
 var lives = 0;
 
+// Ting som bruges til at gøre cursor sej
+
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -23,7 +25,7 @@ document.addEventListener("mousedown", () => {
 });
 
 function ready() {
-  console.log("JavaScript ready!");
+  console.log("JavaScript ready");
   document.querySelector("#btn_start").addEventListener("click", start);
   document
     .querySelector("#btn_go_to_start")
@@ -94,7 +96,6 @@ function popeRun() {
 
   incrementPoints();
 }
-
 function popeGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -235,37 +236,6 @@ function boyGone() {
     .querySelector("#boy_container")
     .addEventListener("mousedown", boyRun);
 }
-
-// function boyRun() {
-//   document
-//     .querySelector("#boy_container")
-//     .removeEventListener("mousedown", boyRun);
-
-//   document.querySelector("#boy_container").classList.add("paused");
-
-//   document.querySelector("#boy_container").classList.add("zoom_out");
-
-//   document
-//     .querySelector("#boy_container")
-//     .addEventListener("animationend", boyGone);
-
-//   decrementLives();
-// }
-
-// function boyGone() {
-//   // let randomnumber = Math.floor(Math.random() * 3) + 1;
-//   document
-//     .querySelector("#boy_container")
-//     .removeEventListener("animationend", boyGone);
-//   document.querySelector("#boy_container").classList.remove("zoom_out");
-//   document.querySelector("#boy_container").classList.remove("paused");
-//   document.querySelector("#boy_container").classList.remove("boyrun");
-//   document.querySelector("#boy_container").offsetWidth;
-//   document.querySelector("#boy_container").classList.add("boyrun");
-//   document
-//     .querySelector("#boy_container")
-//     .addEventListener("mousedown", boyRun);
-// }
 
 function boyRun1() {
   console.log("boyRun1");

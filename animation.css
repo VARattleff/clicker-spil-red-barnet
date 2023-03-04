@@ -1,11 +1,13 @@
+/* Animationer til figurer */
+
 .boyrun1 {
-  animation-name: boy11;
+  animation-name: boy1;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes boy11 {
+@keyframes boy1 {
   0% {
     transform: translate(300%, 200%);
   }
@@ -19,72 +21,14 @@
   }
 }
 
-/* .boyrun2 {
-  animation-name: boy12;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy12 {
-  0% {
-    transform: translate(300%, 200%);
-  }
-
-  25% {
-    transform: translate(100%, 150%);
-  }
-
-  50% {
-    transform: translate(-100%, 100%);
-  }
-
-  75% {
-    transform: translate(-300%, 150%);
-  }
-
-  100% {
-    transform: translate(-500%, -100%);
-  }
-}
-
-.boyrun3 {
-  animation-name: boy13;
-  animation-duration: 7s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy13 {
-  0% {
-    transform: translate(300%, 100%);
-  }
-
-  25% {
-    transform: translate(100%, 150%);
-  }
-
-  50% {
-    transform: translate(-100%, 100%);
-  }
-
-  75% {
-    transform: translate(-300%, 150%);
-  }
-
-  100% {
-    transform: translate(-500%, 100%);
-  }
-} */
-
 .boyrun2 {
-  animation-name: boy21;
+  animation-name: boy2;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes boy21 {
+@keyframes boy2 {
   0% {
     transform: translate(100%, 200%);
   }
@@ -98,26 +42,9 @@
   }
 }
 
-/* .boyrun22 {
-  animation-name: boy22;
-  animation-duration: 7s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy22 {
-  0% {
-    transform: translate(300%, 200%);
-  }
-
-  100% {
-    transform: translate(-500%, 200%);
-  }
-} */
-
 .priest1 {
   animation-name: priest1;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -132,48 +59,14 @@
   }
 }
 
-/* .priest2 {
-  animation-name: priest2;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes priest2 {
-  0% {
-    transform: translate(300%, 100%);
-  }
-
-  100% {
-    transform: translate(-500%, 100%);
-  }
-}
-
-.priest3 {
-  animation-name: priest3;
-  animation-duration: 9s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes priest3 {
-  0% {
-    transform: translate(300%, 200%);
-  }
-
-  100% {
-    transform: translate(-500%, 200%);
-  }
-} */
-
 .priest2 {
-  animation-name: priest21;
+  animation-name: priest2;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes priest21 {
+@keyframes priest2 {
   0% {
     transform: translate(-100%, 200%);
   }
@@ -183,99 +76,31 @@
   }
 }
 
-/* .priest22 {
-  animation-name: priest22;
-  animation-duration: 9s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes priest22 {
-  0% {
-    transform: translate(-100%, 100%);
-  }
-
-  100% {
-    transform: translate(100%, 100%);
-  }
-}
-
-.priest23 {
-  animation-name: priest23;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes priest23 {
-  0% {
-    transform: translate(-100%, 300%);
-  }
-
-  100% {
-    transform: translate(100%, 300%);
-  }
-} */
-
 .bishop {
-  animation-name: bishop1;
+  animation-name: bishop;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes bishop1 {
+@keyframes bishop {
   0% {
-    transform: translate(600%, 300%);
+    transform: translate(-600%, 300%);
   }
 
   100% {
-    transform: translate(-500%, 300%);
-  }
-}
-
-/* .bishop2 {
-  animation-name: bishop2;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes bishop2 {
-  0% {
-    transform: translate(-200%, 100%);
-  }
-
-  100% {
-    transform: translate(500%, 100%);
-  }
-}
-
-.bishop3 {
-  animation-name: bishop3;
-  animation-duration: 7s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-} */
-
-@keyframes bishop3 {
-  0% {
-    transform: translate(-200%, 200%);
-  }
-
-  100% {
-    transform: translate(500%, 200%);
+    transform: translate(500%, 300%);
   }
 }
 
 .cardinal {
-  animation-name: cardinal1;
+  animation-name: cardinal;
   animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes cardinal1 {
+@keyframes cardinal {
   0% {
     transform: translate(400%, 250%);
   }
@@ -284,100 +109,32 @@
     transform: translate(-400%, 250%);
   }
 }
-
-/* .cardina2 {
-  animation-name: cardinal2;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes cardinal2 {
-  0% {
-    transform: translate(-400%, 250%);
-  }
-
-  100% {
-    transform: translate(400%, 250%);
-  }
-}
-
-.cardinal3 {
-  animation-name: cardinal3;
-  animation-duration: 7s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes cardinal3 {
-  0% {
-    transform: translate(-400%, 300%);
-  }
-
-  100% {
-    transform: translate(400%, 300%);
-  }
-} */
 
 .pope {
-  animation-name: pope1;
+  animation-name: pope;
   animation-duration: 8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
-@keyframes pope1 {
+@keyframes pope {
   0% {
-    transform: translate(1000%, 250%);
-  }
-
-  100% {
     transform: translate(-1000%, 250%);
   }
-}
 
-/* .pope2 {
-  animation-name: pope2;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pope2 {
-  0% {
+  100% {
     transform: translate(1000%, 250%);
   }
-
-  100% {
-    transform: translate(-1000%, 250%);
-  }
 }
-
-.pope3 {
-  animation-name: pope3;
-  animation-duration: 6s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pope3 {
-  0% {
-    transform: translate(-1000%, 300%);
-  }
-
-  100% {
-    transform: translate(1000%, 300%);
-  }
-} */
 
 .boy3 {
-  animation-name: boy31;
+  animation-name: boy3;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes boy31 {
+@keyframes boy3 {
   0% {
     transform: translate(-300%, 250%);
   }
@@ -387,41 +144,7 @@
   }
 }
 
-/* .boy32 {
-  animation-name: boy32;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy32 {
-  0% {
-    transform: translate(-300%, 300%);
-  }
-
-  100% {
-    transform: translate(500%, 300%);
-  }
-}
-
-.boy32 {
-  animation-name: boy32;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes boy32 {
-  0% {
-    transform: translate(300%, 250%);
-  }
-
-  100% {
-    transform: translate(-500%, 250%);
-  }
-}
-
-*/
+/* animationer som bruges til at fjerne figurer */
 
 .zoom_out {
   animation-name: zoom_out;
@@ -443,4 +166,53 @@
 
 .paused {
   animation-play-state: paused;
+}
+
+/* animationer, som bruges til tekst */
+
+.text_pulse {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulsetext 2s infinite;
+}
+
+@keyframes pulsetext {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Animation til time bar */
+
+.shrink {
+  animation-name: shrink_kf;
+  animation-duration: 30s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink_kf {
+  0% {
+    scale: 1 1;
+    background-color: limegreen;
+  }
+  50% {
+    background-color: rgb(255, 230, 0);
+  }
+  100% {
+    scale: 1 0;
+    background-color: red;
+  }
 }

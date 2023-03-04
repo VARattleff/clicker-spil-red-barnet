@@ -1,11 +1,6 @@
 @import url(animation.css);
 
-body {
-  filter: grayscale(35%) blur(0.9px);
-  margin: 0;
-  font-family: fantasy;
-  cursor: url(img/newCursor.png) 45 45, auto;
-}
+/* style/animationer, som bruges til at gøre cursor sej */
 
 .cursor {
   width: 60px;
@@ -62,6 +57,15 @@ body {
   }
 }
 
+/* styling */
+
+body {
+  filter: grayscale(35%) blur(0.9px);
+  margin: 0;
+  font-family: fantasy;
+  cursor: url(img/newCursor.png) 45 45, auto;
+}
+
 .expand {
   animation: cursorAnim3 0.5s forwards;
   border: 30px solid red;
@@ -99,19 +103,6 @@ img {
   position: relative;
 }
 
-#level_complete {
-  background-image: url(img/heaven.jpg);
-  aspect-ratio: 16/9;
-  background-size: cover;
-  grid-area: 1 /1;
-  z-index: 999;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(237, 237, 238);
-  text-align: center;
-}
-
 #btn_go_to_start {
   position: absolute;
   background-color: rgb(16, 133, 26);
@@ -127,6 +118,18 @@ img {
   top: 21%;
 }
 
+#level_complete {
+  background-image: url(img/heaven.jpg);
+  aspect-ratio: 16/9;
+  background-size: cover;
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(237, 237, 238);
+  text-align: center;
+}
 #level_complete_1 {
   position: absolute;
   font-size: 250px;
@@ -135,7 +138,6 @@ img {
   filter: drop-shadow(0 0 20px rgb(30, 234, 7));
   white-space: nowrap;
 }
-
 #level_complete_2 {
   position: absolute;
   font-size: 80px;
@@ -145,11 +147,11 @@ img {
   white-space: nowrap;
 }
 
-#game_over.hidden {
+#level_complete.hidden {
   display: none;
 }
 
-#level_complete.hidden {
+#game_over.hidden {
   display: none;
 }
 
@@ -164,7 +166,6 @@ img {
   align-content: center;
   text-align: center;
 }
-
 #game_over_button {
   position: absolute;
   background-color: rgb(16, 133, 26);
@@ -189,7 +190,6 @@ img {
   white-space: nowrap;
   color: white;
 }
-
 #game_over_2 {
   position: absolute;
   font-size: 50px;
@@ -210,7 +210,6 @@ img {
   top: 0;
   left: 60vw;
 }
-
 #boy_sprite {
   width: 100%;
   filter: drop-shadow(0 0 10px rgb(30, 234, 7));
@@ -221,7 +220,6 @@ img {
   top: 0;
   left: 80vw;
 }
-
 #boy1_sprite {
   width: 60%;
   filter: drop-shadow(0 0 10px rgb(30, 234, 7));
@@ -232,7 +230,6 @@ img {
   top: 0;
   left: 30vw;
 }
-
 #boy3_sprite {
   width: 60%;
   filter: drop-shadow(0 0 10px rgb(30, 234, 7));
@@ -243,7 +240,6 @@ img {
   top: 0;
   left: 20vw;
 }
-
 #priest_sprite {
   width: 8%;
   filter: drop-shadow(0 0 20px rgb(253, 3, 3));
@@ -254,7 +250,6 @@ img {
   top: 0;
   left: 20vw;
 }
-
 #bishop_sprite {
   width: 75%;
   filter: drop-shadow(0 0 20px rgb(253, 3, 3));
@@ -265,7 +260,6 @@ img {
   top: 0;
   left: 60vw;
 }
-
 #cardinal_sprite {
   width: 75%;
   filter: drop-shadow(0 0 20px rgb(253, 3, 3));
@@ -276,7 +270,6 @@ img {
   top: 0;
   left: 40vw;
 }
-
 #pope_sprite {
   width: 75%;
   filter: drop-shadow(0 0 20px rgb(253, 3, 3));
@@ -301,12 +294,12 @@ img {
   border-style: none;
   filter: drop-shadow(0 0 5px rgb(255, 255, 255));
 }
-
 #kill_count1 {
   white-space: nowrap;
   text-align: center;
   font-size: 100px;
 }
+
 #life_board {
   text-align: center;
 }
@@ -350,35 +343,12 @@ img {
   left: 45%;
   transform: rotate(90deg);
 }
-
 #time_sprite {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: limegreen;
   transform-origin: center bottom;
-}
-
-.shrink {
-  animation-name: shrink_kf;
-  animation-duration: 30s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes shrink_kf {
-  0% {
-    scale: 1 1;
-    background-color: limegreen;
-  }
-  50% {
-    background-color: rgb(255, 230, 0);
-  }
-  100% {
-    scale: 1 0;
-    background-color: red;
-  }
 }
 
 #btn_start {
@@ -404,7 +374,6 @@ img {
   top: 4%;
   filter: drop-shadow(0 0 20px rgb(30, 234, 7));
 }
-
 #text2 {
   position: absolute;
   font-size: 50px;
@@ -413,7 +382,6 @@ img {
   top: 11%;
   filter: drop-shadow(0 0 20px rgb(30, 234, 7));
 }
-
 #text3 {
   position: absolute;
   font-size: 50px;
@@ -422,7 +390,6 @@ img {
   top: 7%;
   filter: drop-shadow(0 0 20px rgb(30, 234, 7));
 }
-
 #text4 {
   position: absolute;
   font-size: 150px;
@@ -430,51 +397,4 @@ img {
   white-space: nowrap;
   top: 3%;
   filter: drop-shadow(0 0 20px rgb(86, 7, 234));
-}
-
-.text_pulse {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-  transform: scale(1);
-  animation: pulsetext 2s infinite;
-}
-
-@keyframes pulsetext {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-
-.button_pulse {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-  transform: scale(1);
-  animation: pulsebutton 3s infinite;
-  animation-iteration-count: linear;
-}
-
-@keyframes pulsebutton {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
 }
