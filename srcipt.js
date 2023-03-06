@@ -26,13 +26,17 @@ document.addEventListener("mousedown", () => {
 
 function ready() {
   console.log("JavaScript ready");
-  document.querySelector("#btn_start").addEventListener("click", start);
+  document
+    .querySelector("#btn_start")
+    .addEventListener("click", startTransition);
   document
     .querySelector("#btn_go_to_start")
     .addEventListener("click", showStartScreen);
   document
     .querySelector("#game_over_button")
     .addEventListener("click", retryGame);
+  document.querySelector("#game_over").classList.add("hidden");
+  document.querySelector("#level_complete").classList.add("hidden");
 }
 
 function start() {
@@ -41,14 +45,19 @@ function start() {
   displayPoints();
   resetTimer();
 
-  document.querySelector("#start").classList.add("hidden");
-
-  document
-    .querySelector("#game_over_button")
-    .addEventListener("mousedown", start);
+  document.querySelector("#btn_start").addEventListener("mousedown", start);
   startAllAnimation();
   startTimer();
   startMusic();
+}
+
+function startTransition() {
+  document.querySelector("#start").classList.add("transition");
+  document
+    .querySelector("#start")
+    .addEventListener("animationend", transitionEnd);
+
+  start();
 }
 
 function startAllAnimation() {
@@ -359,8 +368,13 @@ function showIncrementedLives() {
 }
 
 function gameOver() {
-  document.querySelector("#game_over").classList.remove("hidden");
   console.log("gameOver");
+  document.querySelector("#game_over").classList.remove("hidden");
+  document.querySelector("#game_over").classList.add("transition1");
+  document
+    .querySelector("#game_over")
+    .addEventListener("animationend", transitionEnd1);
+
   pauseMusic();
   document.querySelector("#game_over_sound").currentTime = 0;
   document.querySelector("#game_over_sound").play();
@@ -369,6 +383,7 @@ function gameOver() {
 function LevelComplete() {
   console.log("levelComplete");
   document.querySelector("#level_complete").classList.remove("hidden");
+  document.querySelector("#level_complete").classList.add("transition1");
   pauseMusic();
   document.querySelector("#winning_sound").currentTime = 0;
   document.querySelector("#winning_sound").play();
@@ -393,8 +408,15 @@ function resetLives() {
 }
 
 function retryGame() {
+  console.log("test8738927");
   resetLives();
-  showStartScreen();
+  document.querySelector("#game_over").classList.add("transition");
+  document
+    .querySelector("#game_over")
+    .addEventListener("animationend", transitionEnd);
+  document.querySelector("#level_complete").classList.add("hidden");
+  resetLives();
+  resetTimer();
   start();
   resetTimer();
 }
@@ -435,4 +457,19 @@ function startMusic() {
 function pauseMusic() {
   document.querySelector("#background_sound").currentTime = 0;
   document.querySelector("#background_sound").pause();
+}
+
+function transitionEnd() {
+  this.removeEventListener("animationend", transitionEnd);
+  this.classList.remove("transition");
+  this.offsetWidth;
+  this.classList.add("hidden");
+}
+function transitionEnd1() {
+  this.removeEventListener("animationend", transitionEnd1);
+  console.log("Transition End 1");
+  this.classList.remove("transition1");
+  this.offsetWidth;
+  console.log(this);
+  this.classList.remove("hidden");
 }
