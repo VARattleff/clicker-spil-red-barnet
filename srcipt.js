@@ -47,6 +47,7 @@ function start() {
     .addEventListener("mousedown", start);
   startAllAnimation();
   startTimer();
+  startMusic();
 }
 
 function startAllAnimation() {
@@ -94,6 +95,9 @@ function popeRun() {
     .querySelector("#pope_container")
     .addEventListener("animationend", popeGone);
 
+  document.querySelector("#shooting_church").currentTime = 0;
+  document.querySelector("#shooting_church").play();
+
   incrementPoints();
 }
 function popeGone() {
@@ -124,9 +128,11 @@ function cardinalRun() {
     .querySelector("#cardinal_container")
     .addEventListener("animationend", cardinalGone);
 
+  document.querySelector("#shooting_church").currentTime = 0;
+  document.querySelector("#shooting_church").play();
+
   incrementPoints();
 }
-
 function cardinalGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -155,9 +161,11 @@ function bishopRun() {
     .querySelector("#bishop_container")
     .addEventListener("animationend", bishopGone);
 
+  document.querySelector("#shooting_church").currentTime = 0;
+  document.querySelector("#shooting_church").play();
+
   incrementPoints();
 }
-
 function bishopGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -186,9 +194,11 @@ function priestRun() {
     .querySelector("#priest_container")
     .addEventListener("animationend", priestGone);
 
+  document.querySelector("#shooting_church").currentTime = 0;
+  document.querySelector("#shooting_church").play();
+
   incrementPoints();
 }
-
 function priestGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -217,9 +227,11 @@ function boyRun() {
     .querySelector("#boy_container")
     .addEventListener("animationend", boyGone);
 
+  document.querySelector("#screaming_sound").currentTime = 0;
+  document.querySelector("#screaming_sound").play();
+
   decrementLives();
 }
-
 function boyGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -251,7 +263,24 @@ function boyRun1() {
     .querySelector("#boy1_container")
     .addEventListener("animationend", boyGone1);
 
+  document.querySelector("#screaming_sound").currentTime = 0;
+  document.querySelector("#screaming_sound").play();
+
   decrementLives();
+}
+function boyGone1() {
+  // let randomnumber = Math.floor(Math.random() * 3) + 1;
+  document
+    .querySelector("#boy1_container")
+    .removeEventListener("animationend", boyGone);
+  document.querySelector("#boy1_sprite").classList.remove("zoom_out");
+  document.querySelector("#boy1_container").classList.remove("paused");
+  document.querySelector("#boy1_container").classList.remove("boyrun2");
+  document.querySelector("#boy1_container").offsetWidth;
+  document.querySelector("#boy1_container").classList.add("boyrun2");
+  document
+    .querySelector("#boy1_container")
+    .addEventListener("mousedown", boyRun1);
 }
 
 function boyRun3() {
@@ -268,9 +297,11 @@ function boyRun3() {
     .querySelector("#boy3_container")
     .addEventListener("animationend", boyGone3);
 
+  document.querySelector("#screaming_sound").currentTime = 0;
+  document.querySelector("#screaming_sound").play();
+
   decrementLives();
 }
-
 function boyGone3() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -284,21 +315,6 @@ function boyGone3() {
   document
     .querySelector("#boy3_container")
     .addEventListener("mousedown", boyRun3);
-}
-
-function boyGone1() {
-  // let randomnumber = Math.floor(Math.random() * 3) + 1;
-  document
-    .querySelector("#boy1_container")
-    .removeEventListener("animationend", boyGone);
-  document.querySelector("#boy1_sprite").classList.remove("zoom_out");
-  document.querySelector("#boy1_container").classList.remove("paused");
-  document.querySelector("#boy1_container").classList.remove("boyrun2");
-  document.querySelector("#boy1_container").offsetWidth;
-  document.querySelector("#boy1_container").classList.add("boyrun2");
-  document
-    .querySelector("#boy1_container")
-    .addEventListener("mousedown", boyRun1);
 }
 
 function incrementPoints() {
@@ -344,11 +360,17 @@ function showIncrementedLives() {
 function gameOver() {
   document.querySelector("#game_over").classList.remove("hidden");
   console.log("gameOver");
+  pauseMusic();
+  document.querySelector("#game_over_sound").currentTime = 0;
+  document.querySelector("#game_over_sound").play();
 }
 
 function LevelComplete() {
   console.log("levelComplete");
   document.querySelector("#level_complete").classList.remove("hidden");
+  pauseMusic();
+  document.querySelector("#winning_sound").currentTime = 0;
+  document.querySelector("#winning_sound").play();
 }
 
 function showStartScreen() {
@@ -402,4 +424,14 @@ function resetTimer() {
   document
     .querySelector("#time_sprite")
     .addEventListener("animationend", timeIsUp);
+}
+
+function startMusic() {
+  document.querySelector("#background_sound").currentTime = 0;
+  document.querySelector("#background_sound").play();
+}
+
+function pauseMusic() {
+  document.querySelector("#background_sound").currentTime = 0;
+  document.querySelector("#background_sound").pause();
 }
