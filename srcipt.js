@@ -39,6 +39,7 @@ function start() {
   points = 0;
   lives = 3;
   displayPoints();
+  resetTimer();
 
   document.querySelector("#start").classList.add("hidden");
 
