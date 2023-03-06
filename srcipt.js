@@ -4,6 +4,7 @@ window.addEventListener("load", ready);
 
 var points = 0;
 var lives = 0;
+let gameRunning;
 
 // Ting som bruges til at gøre cursor sej
 
@@ -32,6 +33,8 @@ function ready() {
   document
     .querySelector("#btn_go_to_start")
     .addEventListener("click", showStartScreen);
+  console.log("virker dette");
+
   document
     .querySelector("#game_over_button")
     .addEventListener("click", retryGame);
@@ -40,6 +43,7 @@ function ready() {
 }
 
 function start() {
+  gameRunning = true;
   points = 0;
   lives = 3;
   displayPoints();
@@ -332,7 +336,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 20) {
+  if (points == 1) {
     LevelComplete();
   }
 }
@@ -369,6 +373,7 @@ function showIncrementedLives() {
 
 function gameOver() {
   console.log("gameOver");
+  gameRunning = false;
   document.querySelector("#game_over").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("transition1");
   document
@@ -381,18 +386,34 @@ function gameOver() {
 }
 
 function LevelComplete() {
+  gameRunning = false;
   console.log("levelComplete");
   document.querySelector("#level_complete").classList.remove("hidden");
   document.querySelector("#level_complete").classList.add("transition1");
+  document
+    .querySelector("#level_complete")
+    .addEventListener("animationend", transitionEnd1);
+
   pauseMusic();
   document.querySelector("#winning_sound").currentTime = 0;
   document.querySelector("#winning_sound").play();
 }
 
 function showStartScreen() {
+  resetLives();
+  document.querySelector("#start").classList.add("transition1");
+  document
+    .querySelector("#start")
+    .addEventListener("animationend", transitionEnd1);
+
+  document
+    .querySelector("#start")
+    .addEventListener("animationend", levelCompleteEnd);
+
   document.querySelector("#start").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("hidden");
-  document.querySelector("#level_complete").classList.add("hidden");
+
+  document.querySelector("#winning_sound").pause();
   resetLives();
   resetTimer();
 }
@@ -408,7 +429,6 @@ function resetLives() {
 }
 
 function retryGame() {
-  console.log("test8738927");
   resetLives();
   document.querySelector("#game_over").classList.add("transition");
   document
@@ -430,10 +450,12 @@ function startTimer() {
 }
 
 function timeIsUp() {
-  if (points >= 20) {
-    levelComplete();
-  } else {
-    gameOver();
+  if (gameRunning) {
+    if (points >= 20) {
+      levelComplete();
+    } else {
+      gameOver();
+    }
   }
 }
 
@@ -452,6 +474,10 @@ function resetTimer() {
 function startMusic() {
   document.querySelector("#background_sound").currentTime = 0;
   document.querySelector("#background_sound").play();
+  document.querySelector("#game_over_sound").currentTime = 0;
+  document.querySelector("#game_over_sound").pause();
+  document.querySelector("#winning_sound").currentTime = 0;
+  document.querySelector("#winning_sound").pause();
 }
 
 function pauseMusic() {
@@ -472,4 +498,11 @@ function transitionEnd1() {
   this.offsetWidth;
   console.log(this);
   this.classList.remove("hidden");
+}
+
+function levelCompleteEnd() {
+  document.querySelector("#level_complete").classList.add("hidden");
+  document
+    .querySelector("#level_complete")
+    .removeEventListener("animationend", levelCompleteEnd);
 }
