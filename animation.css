@@ -51,28 +51,11 @@
 
 @keyframes priest1 {
   0% {
-    transform: translate(300%, 200%);
+    transform: translate(300%, 100%);
   }
 
   100% {
-    transform: translate(-200%, 200%);
-  }
-}
-
-.priest2 {
-  animation-name: priest2;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes priest2 {
-  0% {
-    transform: translate(-100%, 200%);
-  }
-
-  100% {
-    transform: translate(100%, 200%);
+    transform: translate(-200%, 100%);
   }
 }
 
@@ -85,11 +68,11 @@
 
 @keyframes bishop {
   0% {
-    transform: translate(-600%, 300%);
+    transform: translate(-600%, 150%);
   }
 
   100% {
-    transform: translate(500%, 300%);
+    transform: translate(500%, 150%);
   }
 }
 
@@ -102,28 +85,32 @@
 
 @keyframes cardinal {
   0% {
-    transform: translate(400%, 250%);
+    transform: translate(400%, 100%);
+  }
+
+  50% {
+    transform: translate(-100%, 150%);
   }
 
   100% {
-    transform: translate(-400%, 250%);
+    transform: translate(-400%, 100%);
   }
 }
 
 .pope {
   animation-name: pope;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
 @keyframes pope {
   0% {
-    transform: translate(-1000%, 250%);
+    transform: translate(-500%, 150%);
   }
 
   100% {
-    transform: translate(1000%, 250%);
+    transform: translate(500%, 150%);
   }
 }
 
