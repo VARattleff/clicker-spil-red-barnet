@@ -33,7 +33,6 @@ function ready() {
   document
     .querySelector("#btn_go_to_start")
     .addEventListener("click", showStartScreen);
-  console.log("virker dette");
 
   document
     .querySelector("#game_over_button")
