@@ -336,13 +336,16 @@ img {
 
 #time_container {
   position: absolute;
-  height: 200%;
+  height: 158%;
   width: 2%;
   aspect-ratio: 6/30;
   background-color: rgba(208, 204, 204, 0.383);
-  top: -4%;
-  left: 45%;
+  top: 15%;
+  left: 50%;
   transform: rotate(90deg);
+  border-width: 15px;
+  border-style: solid;
+  border-color: black;
 }
 #time_sprite {
   position: absolute;

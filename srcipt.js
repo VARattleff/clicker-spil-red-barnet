@@ -336,7 +336,7 @@ function incrementPoints() {
   points++;
   console.log("har nu " + points + " point");
   displayPoints();
-  if (points == 1) {
+  if (points == 20) {
     LevelComplete();
   }
 }
@@ -499,7 +499,6 @@ function transitionEnd1() {
   console.log(this);
   this.classList.remove("hidden");
 }
-
 function levelCompleteEnd() {
   document.querySelector("#level_complete").classList.add("hidden");
   document
