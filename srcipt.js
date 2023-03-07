@@ -2,8 +2,8 @@
 
 window.addEventListener("load", ready);
 
-var points = 0;
-var lives = 0;
+let points = 0;
+let lives = 0;
 let gameRunning;
 
 // Ting som bruges til at gøre cursor sej
