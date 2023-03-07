@@ -192,8 +192,8 @@ img {
 }
 #game_over_2 {
   position: absolute;
-  font-size: 30px;
-  margin-left: 10%;
+  font-size: 28px;
+  margin-left: 1%;
 
   top: 26%;
   filter: drop-shadow(0 0 10px rgb(30, 234, 7));
@@ -401,4 +401,17 @@ img {
   white-space: nowrap;
   top: 8%;
   filter: drop-shadow(0 0 20px rgb(86, 7, 234));
+}
+
+#kill_count_2 {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(246, 241, 241);
+  border-width: 10px;
+  border-style: none;
+  filter: drop-shadow(0 0 5px rgb(240, 3, 3));
+  top: 24%;
+  margin-left: 92%;
 }

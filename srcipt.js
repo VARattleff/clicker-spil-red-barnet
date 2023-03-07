@@ -352,6 +352,10 @@ function displayPoints() {
   document.querySelector("#kill_count").textContent = points;
 }
 
+function displayPoints2() {
+  document.querySelector("#kill_count_2").textContent = points;
+}
+
 function decrementLives() {
   console.log("mist et liv");
 
@@ -390,6 +394,9 @@ function gameOver() {
   pauseMusic();
   document.querySelector("#game_over_sound").currentTime = 0;
   document.querySelector("#game_over_sound").play();
+
+  displayPoints2();
+  console.log("display points2");
 }
 
 function LevelComplete() {
