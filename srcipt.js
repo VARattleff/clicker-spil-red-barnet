@@ -113,6 +113,7 @@ function popeRun() {
 
   incrementPoints();
 }
+
 function popeGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -146,6 +147,7 @@ function cardinalRun() {
 
   incrementPoints();
 }
+
 function cardinalGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -179,6 +181,7 @@ function bishopRun() {
 
   incrementPoints();
 }
+
 function bishopGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -212,6 +215,7 @@ function priestRun() {
 
   incrementPoints();
 }
+
 function priestGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -245,6 +249,7 @@ function boyRun() {
 
   decrementLives();
 }
+
 function boyGone() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -281,6 +286,7 @@ function boyRun1() {
 
   decrementLives();
 }
+
 function boyGone1() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -315,6 +321,7 @@ function boyRun3() {
 
   decrementLives();
 }
+
 function boyGone3() {
   // let randomnumber = Math.floor(Math.random() * 3) + 1;
   document
@@ -490,6 +497,7 @@ function transitionEnd() {
   this.offsetWidth;
   this.classList.add("hidden");
 }
+
 function transitionEnd1() {
   this.removeEventListener("animationend", transitionEnd1);
   console.log("Transition End 1");
@@ -498,6 +506,7 @@ function transitionEnd1() {
   console.log(this);
   this.classList.remove("hidden");
 }
+
 function levelCompleteEnd() {
   document.querySelector("#level_complete").classList.add("hidden");
   document
