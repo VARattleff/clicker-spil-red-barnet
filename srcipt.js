@@ -7,6 +7,7 @@ var lives = 0;
 let gameRunning;
 
 // Ting som bruges til at gøre cursor sej
+// link til hvor kode til cursor er fundet: https://codepen.io/designcourse/pen/GzJKOE
 
 const cursor = document.querySelector(".cursor");
 

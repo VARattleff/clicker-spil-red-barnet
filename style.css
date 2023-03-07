@@ -289,10 +289,10 @@ img {
   white-space: nowrap;
   text-align: center;
   font-size: 100px;
-  color: red;
+  color: rgb(15, 14, 14);
   border-width: 10px;
   border-style: none;
-  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+  filter: drop-shadow(0 0 5px rgb(240, 3, 3));
 }
 #kill_count1 {
   white-space: nowrap;
